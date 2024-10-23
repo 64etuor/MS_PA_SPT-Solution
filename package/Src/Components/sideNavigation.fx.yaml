@@ -1,0 +1,476 @@
+sideNavigation As CanvasComponent:
+    ActiveScreen: =App.ActiveScreen
+    Fill: =RGBA(0, 0, 0, 0)
+    Height: =App.Height
+    pbMiniDashScreen: =App.ActiveScreen
+    prodDefScreen: =App.ActiveScreen
+    prodJobScreen: =App.ActiveScreen
+    prodPlanScreen: =App.ActiveScreen
+    prodWorkOrderScreen: =App.ActiveScreen
+    Width: =180
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    sideMenu As groupContainer.manualLayoutContainer:
+        BorderColor: =RGBA(219, 219, 219, 1)
+        DropShadow: =DropShadow.None
+        Fill: =RGBA(237, 237, 237, 0.47)
+        Height: =Parent.Height
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Width: =Parent.Width
+        Y: =
+        ZIndex: =1
+
+        imgUser As image:
+            Height: =80
+            Image: =User().Image
+            RadiusBottomLeft: =40
+            RadiusBottomRight: =40
+            RadiusTopLeft: =40
+            RadiusTopRight: =40
+            Width: =80
+            X: =50
+            Y: =82
+            ZIndex: =6
+
+        lbGreeting As label:
+            Font: =Font.'Courier New'
+            Height: =66
+            Italic: =true
+            PaddingLeft: =12
+            Size: =11
+            Text: ="Hello, "&Char(10)&User().FullName
+            Width: =160
+            Y: =6
+            ZIndex: =7
+
+        logo As image:
+            Height: =60
+            Image: ='SE Energy Storage positive@2x (1)'
+            Width: =132
+            X: =24
+            Y: =Parent.Height - Self.Height - 30
+            ZIndex: =13
+
+        imgSetting As image:
+            Height: =50
+            HoverFill: =Color.Black
+            Image: =round
+            RadiusBottomLeft: =25
+            RadiusBottomRight: =25
+            RadiusTopLeft: =25
+            RadiusTopRight: =25
+            Width: =50
+            X: =106
+            Y: =Parent.Height - logo.Height - lbBuild_1.Height - Self.Height - 30
+            ZIndex: =15
+
+        lbBuild_1 As label:
+            Align: =Align.Right
+            Height: =30
+            Size: =7
+            Text: |-
+                ="Build: " & App.StudioVersion
+            Width: =126
+            X: =54
+            Y: =Parent.Height - Self.Height
+            ZIndex: =16
+
+        contNaviList As groupContainer.verticalAutoLayoutContainer:
+            DropShadow: =DropShadow.None
+            Height: =682
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutMode: =LayoutMode.Auto
+            Width: =160
+            X: =10
+            Y: =193
+            ZIndex: =18
+
+            lbDash_sn As label:
+                FontWeight: =FontWeight.Semibold
+                Height: =50
+                PaddingLeft: =10
+                Size: |
+                    =11
+                Text: ="Dashboard"
+                Width: =Parent.Width
+                X: |+
+                    =0
+                    
+                Y: =416
+                ZIndex: =2
+
+            "'2_lbMiniDash_sn' As button":
+                Align: =Align.Left
+                AutoDisableOnSelect: =false
+                BorderThickness: =0
+                Color: =RGBA(77, 77, 77, 1)
+                DisabledColor: =RGBA(77, 77, 77, 1)
+                DisabledFill: =RGBA(77, 77, 77, 1)
+                Fill: |-
+                    =If(
+                        sideNavigation.ActiveScreen.Name = "pbMiniDashScreen", 
+                        RGBA(219, 219, 219, 0.8),
+                        RGBA(0, 0, 0, 0)
+                        )
+                FontWeight: =FontWeight.Normal
+                HoverColor: =RGBA(0, 94, 146, 1)
+                HoverFill: =ColorFade(RGBA(237, 237,  237, 0), 20%)
+                OnSelect: =Navigate(sideNavigation.pbMiniDashScreen, ScreenTransition.Fade)
+                PaddingLeft: =20
+                PressedColor: =
+                PressedFill: =RGBA(219, 219, 219, 1)
+                RadiusBottomLeft: =20
+                RadiusBottomRight: =20
+                RadiusTopLeft: =20
+                RadiusTopRight: =20
+                Size: =9
+                Text: ="Weekly Results"
+                Width: =Parent.Width
+                X: |+
+                    =0
+                    
+                Y: =44
+                ZIndex: =3
+
+            lbProduction As label:
+                DisabledColor: =RGBA(77, 77, 77, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =50
+                PaddingLeft: =10
+                Size: |
+                    =11
+                Text: ="Production"
+                Width: =Parent.Width
+                X: |+
+                    =0
+                    
+                Y: =201
+                ZIndex: =4
+
+            btnJob As button:
+                Align: =Align.Left
+                AutoDisableOnSelect: =false
+                BorderThickness: =0
+                Color: =RGBA(77, 77, 77, 1)
+                DisabledColor: =RGBA(77, 77, 77, 1)
+                DisabledFill: =RGBA(77, 77, 77, 1)
+                Fill: |-
+                    =If(
+                        sideNavigation.ActiveScreen.Name = "prodJobScreen", 
+                        RGBA(219, 219, 219, 0.8),
+                        RGBA(0, 0, 0, 0)
+                        )
+                FontWeight: =FontWeight.Normal
+                HoverColor: =RGBA(0, 94, 146, 1)
+                HoverFill: =ColorFade(RGBA(237, 237,  237, 0), 20%)
+                OnSelect: =Navigate(sideNavigation.prodJobScreen, ScreenTransition.Fade)
+                PaddingLeft: =20
+                PressedColor: =
+                PressedFill: =RGBA(219, 219, 219, 1)
+                RadiusBottomLeft: =20
+                RadiusBottomRight: =20
+                RadiusTopLeft: =20
+                RadiusTopRight: =20
+                Size: =9
+                Text: ="Workforce / Job"
+                Width: =Parent.Width
+                X: |+
+                    =0
+                    
+                Y: =44
+                ZIndex: =5
+
+            btnDef As button:
+                Align: =Align.Left
+                AutoDisableOnSelect: =false
+                BorderThickness: =0
+                Color: =RGBA(77, 77, 77, 1)
+                DisabledColor: =RGBA(77, 77, 77, 1)
+                DisabledFill: =RGBA(77, 77, 77, 1)
+                Fill: |-
+                    =If(
+                        sideNavigation.ActiveScreen.Name = "prodDefScreen", 
+                        RGBA(219, 219, 219, 0.8),
+                        RGBA(0, 0, 0, 0)
+                        )
+                FontWeight: =FontWeight.Normal
+                HoverColor: =RGBA(0, 94, 146, 1)
+                HoverFill: =ColorFade(RGBA(237, 237,  237, 0), 20%)
+                OnSelect: =Navigate(sideNavigation.prodDefScreen, ScreenTransition.Fade)
+                PaddingLeft: =20
+                PressedColor: =
+                PressedFill: =RGBA(219, 219, 219, 1)
+                RadiusBottomLeft: =20
+                RadiusBottomRight: =20
+                RadiusTopLeft: =20
+                RadiusTopRight: =20
+                Size: =9
+                Text: ="Defects"
+                Width: =Parent.Width
+                X: |+
+                    =0
+                    
+                Y: =84
+                ZIndex: =6
+
+            btnPO As button:
+                Align: =Align.Left
+                AutoDisableOnSelect: =false
+                BorderThickness: =0
+                Color: =RGBA(77, 77, 77, 1)
+                DisabledColor: =RGBA(77, 77, 77, 1)
+                DisabledFill: =RGBA(77, 77, 77, 1)
+                Fill: =RGBA(0, 0, 0, 0)
+                FontWeight: =FontWeight.Normal
+                HoverColor: =RGBA(0, 94, 146, 1)
+                HoverFill: =ColorFade(RGBA(237, 237,  237, 0), 20%)
+                OnSelect: =Navigate(sideNavigation.prodWorkOrderScreen, ScreenTransition.Fade)
+                PaddingLeft: =20
+                PressedColor: =
+                PressedFill: =RGBA(219, 219, 219, 1)
+                RadiusBottomLeft: =20
+                RadiusBottomRight: =20
+                RadiusTopLeft: =20
+                RadiusTopRight: =20
+                Size: =9
+                Text: ="Work Order"
+                Width: =Parent.Width
+                X: |+
+                    =0
+                    
+                Y: =164
+                ZIndex: =7
+
+            btnPlan As button:
+                Align: =Align.Left
+                AutoDisableOnSelect: =false
+                BorderThickness: =0
+                Color: =RGBA(77, 77, 77, 1)
+                DisabledColor: =RGBA(77, 77, 77, 1)
+                DisabledFill: =RGBA(77, 77, 77, 1)
+                Fill: =RGBA(0, 0, 0, 0)
+                FontWeight: =FontWeight.Normal
+                HoverColor: =RGBA(0, 94, 146, 1)
+                HoverFill: =ColorFade(RGBA(237, 237,  237, 0), 20%)
+                OnSelect: =Navigate(sideNavigation.prodPlanScreen, ScreenTransition.Fade)
+                PaddingLeft: =20
+                PressedColor: =
+                PressedFill: =RGBA(219, 219, 219, 1)
+                RadiusBottomLeft: =20
+                RadiusBottomRight: =20
+                RadiusTopLeft: =20
+                RadiusTopRight: =20
+                Size: =9
+                Text: ="Plan"
+                Width: =Parent.Width
+                X: |+
+                    =0
+                    
+                Y: =124
+                ZIndex: =8
+
+            btnST As button:
+                Align: =Align.Left
+                AutoDisableOnSelect: =false
+                BorderThickness: =0
+                Color: =RGBA(77, 77, 77, 1)
+                DisabledColor: =RGBA(77, 77, 77, 1)
+                DisabledFill: =RGBA(77, 77, 77, 1)
+                Fill: =RGBA(0, 0, 0, 0)
+                FontWeight: =FontWeight.Normal
+                HoverColor: =RGBA(0, 94, 146, 1)
+                HoverFill: =ColorFade(RGBA(237, 237,  237, 0), 20%)
+                PaddingLeft: =20
+                PressedColor: =
+                PressedFill: =RGBA(219, 219, 219, 1)
+                RadiusBottomLeft: =20
+                RadiusBottomRight: =20
+                RadiusTopLeft: =20
+                RadiusTopRight: =20
+                Size: =9
+                Text: ="S/T Management"
+                Width: =Parent.Width
+                X: |+
+                    =0
+                    
+                Y: =244
+                ZIndex: =9
+
+            btnWP As button:
+                Align: =Align.Left
+                AutoDisableOnSelect: =false
+                BorderThickness: =0
+                Color: =RGBA(77, 77, 77, 1)
+                DisabledColor: =RGBA(77, 77, 77, 1)
+                DisabledFill: =RGBA(77, 77, 77, 1)
+                Fill: =RGBA(0, 0, 0, 0)
+                FontWeight: =FontWeight.Normal
+                HoverColor: =RGBA(0, 94, 146, 1)
+                HoverFill: =ColorFade(RGBA(237, 237,  237, 0), 20%)
+                PaddingLeft: =20
+                PressedColor: =
+                PressedFill: =RGBA(219, 219, 219, 1)
+                RadiusBottomLeft: =20
+                RadiusBottomRight: =20
+                RadiusTopLeft: =20
+                RadiusTopRight: =20
+                Size: =9
+                Text: ="Work Process"
+                Width: =Parent.Width
+                X: |+
+                    =0
+                    
+                Y: =204
+                ZIndex: =10
+
+            Label2_1 As label:
+                FontWeight: =FontWeight.Semibold
+                Height: =50
+                PaddingLeft: =10
+                Size: |
+                    =11
+                Text: ="HR"
+                Width: =Parent.Width
+                X: |+
+                    =0
+                    
+                Y: =288
+                ZIndex: =11
+
+            btnWP_2 As button:
+                Align: =Align.Left
+                AutoDisableOnSelect: =false
+                BorderThickness: =0
+                Color: =RGBA(77, 77, 77, 1)
+                DisabledColor: =RGBA(77, 77, 77, 1)
+                DisabledFill: =RGBA(77, 77, 77, 1)
+                Fill: =RGBA(0, 0, 0, 0)
+                FontWeight: =FontWeight.Normal
+                HoverColor: =RGBA(0, 94, 146, 1)
+                HoverFill: =ColorFade(RGBA(237, 237,  237, 0), 20%)
+                PaddingLeft: =20
+                PressedColor: =
+                PressedFill: =RGBA(219, 219, 219, 1)
+                RadiusBottomLeft: =20
+                RadiusBottomRight: =20
+                RadiusTopLeft: =20
+                RadiusTopRight: =20
+                Size: =9
+                Text: ="Personnel Info"
+                Width: =Parent.Width
+                X: |+
+                    =0
+                    
+                Y: =204
+                ZIndex: =12
+
+            btnWP_1 As button:
+                Align: =Align.Left
+                AutoDisableOnSelect: =false
+                BorderThickness: =0
+                Color: =RGBA(77, 77, 77, 1)
+                DisabledColor: =RGBA(77, 77, 77, 1)
+                DisabledFill: =RGBA(77, 77, 77, 1)
+                Fill: =RGBA(0, 0, 0, 0)
+                FontWeight: =FontWeight.Normal
+                HoverColor: =RGBA(0, 94, 146, 1)
+                HoverFill: =ColorFade(RGBA(237, 237,  237, 0), 20%)
+                PaddingLeft: =20
+                PressedColor: =
+                PressedFill: =RGBA(219, 219, 219, 1)
+                RadiusBottomLeft: =20
+                RadiusBottomRight: =20
+                RadiusTopLeft: =20
+                RadiusTopRight: =20
+                Size: =9
+                Text: ="Attendance"
+                Width: =Parent.Width
+                X: |+
+                    =0
+                    
+                Y: =204
+                ZIndex: =13
+
+            lbFinance As label:
+                FontWeight: =FontWeight.Semibold
+                Height: =50
+                PaddingLeft: =10
+                Size: |
+                    =11
+                Text: ="Finance"
+                Width: =Parent.Width
+                X: |+
+                    =0
+                    
+                Y: =348
+                ZIndex: =14
+
+            btnWP_3 As button:
+                Align: =Align.Left
+                AutoDisableOnSelect: =false
+                BorderThickness: =0
+                Color: =RGBA(77, 77, 77, 1)
+                DisabledColor: =RGBA(77, 77, 77, 1)
+                DisabledFill: =RGBA(77, 77, 77, 1)
+                Fill: =RGBA(0, 0, 0, 0)
+                FontWeight: =FontWeight.Normal
+                HoverColor: =RGBA(0, 94, 146, 1)
+                HoverFill: =ColorFade(RGBA(237, 237,  237, 0), 20%)
+                PaddingLeft: =20
+                PressedColor: =
+                PressedFill: =RGBA(219, 219, 219, 1)
+                RadiusBottomLeft: =20
+                RadiusBottomRight: =20
+                RadiusTopLeft: =20
+                RadiusTopRight: =20
+                Size: =9
+                Text: ="OpEx Ledger"
+                Width: =Parent.Width
+                X: |+
+                    =0
+                    
+                Y: =204
+                ZIndex: =15
+
+            btnWP_4 As button:
+                Align: =Align.Left
+                AutoDisableOnSelect: =false
+                BorderThickness: =0
+                Color: =RGBA(77, 77, 77, 1)
+                DisabledColor: =RGBA(77, 77, 77, 1)
+                DisabledFill: =RGBA(77, 77, 77, 1)
+                Fill: =RGBA(0, 0, 0, 0)
+                FontWeight: =FontWeight.Normal
+                HoverColor: =RGBA(0, 94, 146, 1)
+                HoverFill: =ColorFade(RGBA(237, 237,  237, 0), 20%)
+                PaddingLeft: =20
+                PressedColor: =
+                PressedFill: =RGBA(219, 219, 219, 1)
+                RadiusBottomLeft: =20
+                RadiusBottomRight: =20
+                RadiusTopLeft: =20
+                RadiusTopRight: =20
+                Size: =9
+                Text: ="OpEx Budget"
+                Width: =Parent.Width
+                X: |+
+                    =0
+                    
+                Y: =204
+                ZIndex: =16
+
+    Divider_sn As groupContainer.manualLayoutContainer:
+        DropShadow: =DropShadow.None
+        Fill: =RGBA(219, 219, 219, 1)
+        Height: =Parent.Height
+        Width: =1
+        X: =Parent.Width - 1
+        Y: |
+            =0
+        ZIndex: =2
+

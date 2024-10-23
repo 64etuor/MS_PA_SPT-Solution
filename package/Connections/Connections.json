@@ -1,0 +1,72 @@
+{
+  "f8d40288-c2d1-41bf-9761-1175340c181b": {
+    "appActions": [
+      "providers/PowerPlatform.Governance/Operations/Read",
+      "providers/PowerPlatform.Governance/Operations/Write",
+      "providers/PowerPlatform.Governance/Operations/Delete"
+    ],
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "SharePoint",
+      "iconUri": "https://connectoricons-prod.azureedge.net/u/jayawan/releases/v1.0.1697/1.0.1697.3786/sharepointonline/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {
+      "https://solaredge0.sharepoint.com/sites/SPT_Project": {
+        "dataSources": {
+          "[HR_01]인사 정보": {
+            "tableName": "e6c413a9-68d5-4302-9435-ffbcce79ed6e"
+          },
+          "_db_processcode": {
+            "tableName": "8190d72e-36ba-4b33-ae11-9ee92063bcc8"
+          },
+          "_db_standardTime": {
+            "tableName": "75edcae1-c749-467b-bad0-1b772c2171a5"
+          },
+          "_pdR_att": {
+            "tableName": "1a632929-cc58-417f-9b6d-785f85f4ad80"
+          },
+          "_pdR_commit_history": {
+            "tableName": "ad7e49b1-ad4c-4648-a9e2-f517fb8567b0"
+          },
+          "_pdR_plan": {
+            "tableName": "38bf314a-3e38-413d-880d-5de4cc02f68c"
+          },
+          "_pdR_prod": {
+            "tableName": "9dd8174e-16af-4d56-bcb0-78b6a74fcd36"
+          },
+          "_pdR_prod_deleted": {
+            "tableName": "4d26c7b4-f6f6-4867-9bb4-7dac13cb6951"
+          },
+          "_pdR_unofficial_commit_history": {
+            "tableName": "1cbee6e8-628b-4c21-b038-63712ab6b18e"
+          },
+          "_productionRecord": {
+            "tableName": "d3dc05e0-5a45-423e-8842-696a1e658cac"
+          },
+          "_workOrder": {
+            "tableName": "174f7144-1658-4138-9ea2-12cddcebf8e7"
+          }
+        }
+      }
+    },
+    "dataSources": [
+      "_productionRecord",
+      "_db_processcode",
+      "_workOrder",
+      "[HR_01]인사 정보",
+      "_pdR_prod",
+      "_pdR_att",
+      "_pdR_commit_history",
+      "_pdR_unofficial_commit_history",
+      "_pdR_plan",
+      "_db_standardTime",
+      "_pdR_prod_deleted"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "f8d40288-c2d1-41bf-9761-1175340c181b"
+  }
+}

@@ -1,0 +1,33 @@
+pbMiniDashScreen As screen:
+
+    embededPowerBI As powerbi:
+        BorderThickness: =0
+        DashboardId: ="254eae7f-99e4-4ac5-809d-ad8e1a236a99"
+        Height: =963
+        TileUrl: |-
+            ="https://app.powerbi.com/embed?dashboardId=254eae7f-99e4-4ac5-809d-ad8e1a236a99&tileId=471f2b66-b727-406d-9535-4d0a39d2f045&config=eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly9XQUJJLVdFU1QtRVVST1BFLUItUFJJTUFSWS1yZWRpcmVjdC5hbmFseXNpcy53aW5kb3dzLm5ldCIsImVtYmVkRmVhdHVyZXMiOnt9fQ%3d%3d"
+        Width: =1692
+        WorkspaceId: ="__my-workspace"
+        X: =234
+        Y: =73
+        ZIndex: =1
+
+    sideNavigation_pb As sideNavigation:
+        pbMiniDashScreen: =pbMiniDashScreen
+        prodDefScreen: =prodDefScreen
+        prodJobScreen: =prodJobScreen
+        prodPlanScreen: =prodPlanScreen
+        prodWorkOrderScreen: =prodWorkOrderScreen
+        ZIndex: =2
+
+    Title_pb As label:
+        AutoHeight: =true
+        FontWeight: =FontWeight.Bold
+        Size: =galFontSize + 7
+        Text: ="Power BI mini Dashboard"
+        Width: =690
+        X: =200
+        Y: |
+            =15
+        ZIndex: =3
+

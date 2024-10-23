@@ -1,0 +1,4048 @@
+prodDefScreen As screen:
+
+    sideNavigation_def As sideNavigation:
+        pbMiniDashScreen: =pbMiniDashScreen
+        prodDefScreen: =prodDefScreen
+        prodJobScreen: =prodJobScreen
+        prodPlanScreen: =prodPlanScreen
+        prodWorkOrderScreen: =prodWorkOrderScreen
+
+    contHeader_def As groupContainer.horizontalAutoLayoutContainer:
+        BorderColor: =RGBA(9, 33, 98, 1)
+        DropShadow: =DropShadow.None
+        Height: |
+            =45
+        LayoutMode: =LayoutMode.Auto
+        PaddingRight: =0.00
+        PaddingTop: =0.00
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Width: =App.Width - sideNavigation_def.Width - 80
+        X: =sideNavigation_def.Width + 40
+        Y: |
+            =150
+        ZIndex: =2
+
+        hdID As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(237, 237, 237, 1)
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(203, 102, 102, 1)
+            Height: =Parent.Height
+            PaddingRight: =7.25
+            PaddingTop: =7.25
+            Size: =galFontSize
+            Text: ="ID"
+            Width: =Parent.Width * 0.025
+            X: =0.00
+            ZIndex: =1
+
+        hdDate As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(237, 237, 237, 1)
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(203, 102, 102, 1)
+            Height: =Parent.Height
+            PaddingRight: =7.25
+            PaddingTop: =7.25
+            Size: =galFontSize
+            Text: ="날짜"
+            Width: =Parent.Width * 0.065
+            X: =0.00
+            ZIndex: =2
+
+        hdLine As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(9, 33, 98, 1)
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(203, 102, 102, 1)
+            Height: =Parent.Height
+            PaddingRight: =7.25
+            PaddingTop: =7.25
+            Size: =galFontSize
+            Text: ="라인"
+            Width: =Parent.Width * 0.025
+            X: =173.94
+            ZIndex: =3
+
+        hdType As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(9, 33, 98, 1)
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(203, 102, 102, 1)
+            Height: =Parent.Height
+            PaddingRight: =7.25
+            PaddingTop: =7.25
+            Size: =galFontSize
+            Text: ="Type"
+            Width: =Parent.Width * 0.045
+            X: =289.90
+            ZIndex: =4
+
+        hdPO As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(9, 33, 98, 1)
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(203, 102, 102, 1)
+            Height: =Parent.Height
+            PaddingRight: =7.25
+            PaddingTop: =7.25
+            Size: =galFontSize
+            Text: ="P.O"
+            Width: =Parent.Width * 0.040
+            X: =608.78
+            ZIndex: =5
+
+        hdProductNo As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(9, 33, 98, 1)
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(203, 102, 102, 1)
+            Height: =Parent.Height
+            PaddingRight: =7.25
+            PaddingTop: =7.25
+            Size: =galFontSize
+            Text: ="ProductNo"
+            Width: =Parent.Width * 0.055
+            X: =434.85
+            ZIndex: =6
+
+        hdRemark As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(9, 33, 98, 1)
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(203, 102, 102, 1)
+            Height: =Parent.Height
+            PaddingRight: =7.25
+            PaddingTop: =7.25
+            Size: =galFontSize
+            Text: ="Remark"
+            Width: =Parent.Width * 0.049
+            X: =724.74
+            ZIndex: =7
+
+        hdShift As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(9, 33, 98, 1)
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(203, 102, 102, 1)
+            Height: =Parent.Height
+            PaddingRight: =7.25
+            PaddingTop: =7.25
+            Size: =galFontSize
+            Text: ="Shift"
+            Width: =Parent.Width * 0.025
+            X: =898.68
+            ZIndex: =8
+
+        hdProcess As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(9, 33, 98, 1)
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(203, 102, 102, 1)
+            Height: =Parent.Height
+            PaddingRight: =7.25
+            PaddingTop: =7.25
+            Size: =galFontSize
+            Text: ="Process"
+            Width: =Parent.Width * 0.065
+            X: =1014.64
+            ZIndex: =9
+
+        hdPartNo As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(9, 33, 98, 1)
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(203, 102, 102, 1)
+            Height: =Parent.Height
+            PaddingRight: =7.25
+            PaddingTop: =7.25
+            Size: =galFontSize
+            Text: ="PartNo"
+            Width: =Parent.Width * 0.055
+            X: =1232.06
+            ZIndex: =10
+
+        hdPartName As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(9, 33, 98, 1)
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(203, 102, 102, 1)
+            Height: =Parent.Height
+            PaddingRight: =7.25
+            PaddingTop: =7.25
+            Size: =galFontSize
+            Text: ="PartName"
+            Width: =Parent.Width * 0.065
+            X: =1319.03
+            ZIndex: =11
+
+        hdSN As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(9, 33, 98, 1)
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(203, 102, 102, 1)
+            Height: =Parent.Height
+            PaddingRight: =7.25
+            PaddingTop: =7.25
+            Size: =galFontSize
+            Text: ="S/N"
+            Width: =Parent.Width * 0.049
+            X: =hdPartName.X + hdPartName.Width
+            ZIndex: =12
+
+        hdPicture As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(9, 33, 98, 1)
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(203, 102, 102, 1)
+            Height: =Parent.Height
+            PaddingRight: =7.25
+            PaddingTop: =7.25
+            Size: =galFontSize
+            Text: ="Picture"
+            Width: =Parent.Width * 0.08
+            X: =1434.99
+            ZIndex: =13
+
+        hdQty As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(9, 33, 98, 1)
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(203, 102, 102, 1)
+            Height: =Parent.Height
+            PaddingRight: =7.25
+            PaddingTop: =7.25
+            Size: =galFontSize
+            Text: ="Qty"
+            Width: =Parent.Width * 0.025
+            X: =1550.95
+            ZIndex: =14
+
+        hdDiv1 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(9, 33, 98, 1)
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(203, 102, 102, 1)
+            Height: =Parent.Height
+            PaddingRight: =7.25
+            PaddingTop: =7.25
+            Size: =galFontSize
+            Text: ="불량유형1"
+            Width: =Parent.Width * 0.07
+            X: =1695.90
+            ZIndex: =15
+
+        hdDiv2 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(9, 33, 98, 1)
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(203, 102, 102, 1)
+            Height: =Parent.Height
+            PaddingRight: =7.25
+            PaddingTop: =7.25
+            Size: =galFontSize
+            Text: ="불량유형2"
+            Width: =Parent.Width * 0.065
+            X: =1695.90
+            ZIndex: =16
+
+        hdReworkTime As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(9, 33, 98, 1)
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(203, 102, 102, 1)
+            Height: =Parent.Height
+            PaddingRight: =7.25
+            PaddingTop: =7.25
+            Size: =galFontSize
+            Text: |-
+                ="Rework
+                Time(m)"
+            Width: =Parent.Width * 0.04
+            X: =1695.90
+            ZIndex: =17
+
+        hdWorker As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(9, 33, 98, 1)
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(203, 102, 102, 1)
+            Height: =Parent.Height
+            PaddingRight: =7.25
+            PaddingTop: =7.25
+            Size: =galFontSize
+            Text: ="작업자"
+            Width: =Parent.Width * 0.06
+            X: =1695.90
+            ZIndex: =18
+
+        hdActionTaken As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(9, 33, 98, 1)
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(203, 102, 102, 1)
+            Height: =Parent.Height
+            PaddingRight: =7.25
+            PaddingTop: =7.25
+            Size: =galFontSize
+            Text: ="Action Taken"
+            Width: =Parent.Width * 0.07
+            X: =1695.90
+            ZIndex: =19
+
+        hdDelete As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(9, 33, 98, 1)
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(203, 102, 102, 1)
+            Height: =Parent.Height
+            PaddingRight: =7.25
+            PaddingTop: =7.25
+            Size: =galFontSize
+            Text: ="삭제"
+            Width: =Parent.Width * 0.025
+            X: =1695.90
+            ZIndex: =20
+
+    contForm As groupContainer.manualLayoutContainer:
+        DropShadow: =DropShadow.None
+        Height: =860
+        PaddingRight: =0.00
+        PaddingTop: =0.00
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Width: =contHeader_def.Width + 10
+        X: =contHeader_def.X
+        Y: =contHeader_def.Y + contHeader_def.Height
+        ZIndex: =3
+
+        gridForm_def As gallery.galleryVertical:
+            BorderColor: =RGBA(9, 33, 98, 1)
+            DelayItemLoading: =true
+            Height: =Parent.Height
+            Items: |
+                =Filter(_productionRecord, 
+                Date >= pckStartDate.SelectedDate && Date <= pckEndDate.SelectedDate)
+            Layout: =Layout.Vertical
+            LoadingSpinner: =LoadingSpinner.Data
+            TemplatePadding: =0
+            TemplateSize: =120
+            Width: =contHeader_def.Width + 20
+            X: =0.00
+            Y: |
+                =0
+            ZIndex: =1
+
+            txiProductNo As text:
+                BorderColor: =RGBA(237, 237, 237, 1)
+                BorderThickness: =0
+                Default: |-
+                    =If(ThisItem.ID in colTaskUpdates.ID, 
+                        LookUp(colTaskUpdates, ID = ThisItem.ID, ProductNo), 
+                        ThisItem.ProductNo
+                    )
+                DisabledColor: =RGBA(77, 77, 77, 1)
+                DisplayMode: =DisplayMode.View
+                Height: =galItemHeight
+                HintText: ="제품 번호"
+                Mode: =TextMode.MultiLine
+                OnChange: |
+                    =If(
+                        ThisItem.ID in colTaskUpdates.ID,
+                        Update(
+                            colTaskUpdates, 
+                            LookUp(colTaskUpdates, 
+                            ID = ThisItem.ID),
+                            { 
+                                ID: ThisItem.ID,
+                                Date: DateValue(txiDate.Text), 
+                                Line: txiLine.Text, 
+                                Type: txiType.Text, 
+                                PO: txiPO.Text, 
+                                ProductNo: txiProductNo.Text, 
+                                Shift: txiShift.Text, 
+                                Process: txiProcess.Text, 
+                                PartNo: txiPartNo.Text, 
+                                PartName: txiPartName.Text, 
+                                SN: txiSN.Text,
+                                Qty: Value(txiQty.Text),
+                                OData__x0044_iv1: drpDiv1.Selected.Value,
+                                OData__x0044_iv2: txiDiv2.Text, 
+                                ReworkTime: Value(txiReworkTime.Text),
+                                Worker: ForAll(cbbWorker.SelectedItems, 
+                                {
+                                    Id : ThisRecord.ID,
+                                    Value: ThisRecord.'이름 (OData__xc774__xb984_)'
+                                }
+                                )
+                    
+                               
+                            }
+                        ), 
+                        Collect(
+                            colTaskUpdates,
+                            { 
+                                ID: ThisItem.ID,
+                                Date: DateValue(txiDate.Text), 
+                                Line: txiLine.Text, 
+                                Type: txiType.Text, 
+                                PO: txiPO.Text, 
+                                ProductNo: txiProductNo.Text, 
+                                Shift: txiShift.Text, 
+                                Process: txiProcess.Text, 
+                                PartNo: txiPartNo.Text, 
+                                PartName: txiPartName.Text,
+                                SN: txiSN.Text, 
+                                Qty: Value(txiQty.Text),
+                                OData__x0044_iv1: drpDiv1.Selected.Value,
+                                OData__x0044_iv2: txiDiv2.Text, 
+                                ReworkTime: Value(txiReworkTime.Text),
+                                Worker: ForAll(cbbWorker.SelectedItems, 
+                                {
+                                    Id : ThisRecord.ID,
+                                    Value: ThisRecord.'이름 (OData__xc774__xb984_)'
+                                }
+                                )     
+                            }
+                        )
+                    )
+                OnSelect: =Select(Parent)
+                PaddingTop: =48
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =galFontSize
+                TabIndex: =4
+                Width: =hdProductNo.Width
+                X: =txiPO.X + txiPO.Width
+                ZIndex: =1
+
+            txiPO As text:
+                Align: =Align.Center
+                BorderColor: =RGBA(237, 237, 237, 1)
+                BorderThickness: =0
+                Default: |-
+                    =If(ThisItem.ID in colTaskUpdates.ID, 
+                        LookUp(colTaskUpdates, ID = ThisItem.ID, PO), 
+                        ThisItem.PO
+                    )
+                DisabledColor: =RGBA(77, 77, 77, 1)
+                DisplayMode: =DisplayMode.View
+                Height: =galItemHeight
+                HintText: ="P.O 번호"
+                OnChange: |
+                    =If(
+                        ThisItem.ID in colTaskUpdates.ID,
+                        Update(
+                            colTaskUpdates, 
+                            LookUp(colTaskUpdates, 
+                            ID = ThisItem.ID),
+                            { 
+                                ID: ThisItem.ID,
+                                Date: DateValue(txiDate.Text), 
+                                Line: txiLine.Text, 
+                                Type: txiType.Text, 
+                                PO: txiPO.Text, 
+                                ProductNo: txiProductNo.Text, 
+                                Shift: txiShift.Text, 
+                                Process: txiProcess.Text, 
+                                PartNo: txiPartNo.Text, 
+                                PartName: txiPartName.Text, 
+                                SN: txiSN.Text,
+                                Qty: Value(txiQty.Text),
+                                OData__x0044_iv1: drpDiv1.Selected.Value,
+                                OData__x0044_iv2: txiDiv2.Text, 
+                                ReworkTime: Value(txiReworkTime.Text),
+                                Worker: ForAll(cbbWorker.SelectedItems, 
+                                {
+                                    Id : ThisRecord.ID,
+                                    Value: ThisRecord.'이름 (OData__xc774__xb984_)'
+                                }
+                                )
+                    
+                               
+                            }
+                        ), 
+                        Collect(
+                            colTaskUpdates,
+                            { 
+                                ID: ThisItem.ID,
+                                Date: DateValue(txiDate.Text), 
+                                Line: txiLine.Text, 
+                                Type: txiType.Text, 
+                                PO: txiPO.Text, 
+                                ProductNo: txiProductNo.Text, 
+                                Shift: txiShift.Text, 
+                                Process: txiProcess.Text, 
+                                PartNo: txiPartNo.Text, 
+                                PartName: txiPartName.Text,
+                                SN: txiSN.Text, 
+                                Qty: Value(txiQty.Text),
+                                OData__x0044_iv1: drpDiv1.Selected.Value,
+                                OData__x0044_iv2: txiDiv2.Text, 
+                                ReworkTime: Value(txiReworkTime.Text),
+                                Worker: ForAll(cbbWorker.SelectedItems, 
+                                {
+                                    Id : ThisRecord.ID,
+                                    Value: ThisRecord.'이름 (OData__xc774__xb984_)'
+                                }
+                                )     
+                            }
+                        )
+                    )
+                OnSelect: =Select(Parent)
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =galFontSize
+                TabIndex: =5
+                Width: =hdPO.Width
+                X: =txiType.X + txiType.Width
+                ZIndex: =2
+
+            txiRemark As text:
+                BorderColor: =RGBA(237, 237, 237, 1)
+                BorderThickness: =0
+                Default: |-
+                    =If(ThisItem.ID in colTaskUpdates.ID, 
+                        LookUp(colTaskUpdates, ID = ThisItem.ID, Remark), 
+                        ThisItem.Remark
+                    )
+                DisabledColor: =RGBA(77, 77, 77, 1)
+                DisplayMode: =DisplayMode.View
+                Height: =galItemHeight
+                HintText: ="특이사항"
+                OnChange: |
+                    =If(
+                        ThisItem.ID in colTaskUpdates.ID,
+                        Update(
+                            colTaskUpdates, 
+                            LookUp(colTaskUpdates, 
+                            ID = ThisItem.ID),
+                            { 
+                                ID: ThisItem.ID,
+                                Date: DateValue(txiDate.Text), 
+                                Line: txiLine.Text, 
+                                Type: txiType.Text, 
+                                PO: txiPO.Text, 
+                                ProductNo: txiProductNo.Text, 
+                                Shift: txiShift.Text, 
+                                Process: txiProcess.Text, 
+                                PartNo: txiPartNo.Text, 
+                                PartName: txiPartName.Text, 
+                                SN: txiSN.Text,
+                                Qty: Value(txiQty.Text),
+                                OData__x0044_iv1: drpDiv1.Selected.Value,
+                                OData__x0044_iv2: txiDiv2.Text, 
+                                ReworkTime: Value(txiReworkTime.Text),
+                                Worker: ForAll(cbbWorker.SelectedItems, 
+                                {
+                                    Id : ThisRecord.ID,
+                                    Value: ThisRecord.'이름 (OData__xc774__xb984_)'
+                                }
+                                )
+                    
+                               
+                            }
+                        ), 
+                        Collect(
+                            colTaskUpdates,
+                            { 
+                                ID: ThisItem.ID,
+                                Date: DateValue(txiDate.Text), 
+                                Line: txiLine.Text, 
+                                Type: txiType.Text, 
+                                PO: txiPO.Text, 
+                                ProductNo: txiProductNo.Text, 
+                                Shift: txiShift.Text, 
+                                Process: txiProcess.Text, 
+                                PartNo: txiPartNo.Text, 
+                                PartName: txiPartName.Text,
+                                SN: txiSN.Text, 
+                                Qty: Value(txiQty.Text),
+                                OData__x0044_iv1: drpDiv1.Selected.Value,
+                                OData__x0044_iv2: txiDiv2.Text, 
+                                ReworkTime: Value(txiReworkTime.Text),
+                                Worker: ForAll(cbbWorker.SelectedItems, 
+                                {
+                                    Id : ThisRecord.ID,
+                                    Value: ThisRecord.'이름 (OData__xc774__xb984_)'
+                                }
+                                )     
+                            }
+                        )
+                    )
+                OnSelect: =Select(Parent)
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =galFontSize
+                TabIndex: =6
+                Width: =hdRemark.Width
+                X: =txiProductNo.X + txiProductNo.Width
+                ZIndex: =3
+
+            trashIcon_def As icon.Trash:
+                BorderColor: =RGBA(237, 237, 237, 1)
+                Color: =RGBA(128, 128, 128, 1)
+                DisplayMode: =If(varEditFormVis = true, DisplayMode.View, DisplayMode.Edit)
+                Height: =galItemHeight
+                Icon: =Icon.Trash
+                OnSelect: |-
+                    =Remove(_productionRecord, ThisItem);
+                    
+                    Remove(colTaskUpdates, LookUp(colTaskUpdates, ID = ThisItem.ID))
+                Width: =hdDelete.Width
+                X: =txiActionTaken.X + txiActionTaken.Width
+                Y: =
+                ZIndex: =4
+
+            txiDate As text:
+                Align: =Align.Center
+                BorderColor: =RGBA(237, 237, 237, 1)
+                BorderThickness: =0
+                Default: |-
+                    =If(ThisItem.ID in colTaskUpdates.ID, 
+                        LookUp(colTaskUpdates, ID = ThisItem.ID, Date), 
+                        ThisItem.Date
+                    )
+                DisabledColor: =RGBA(77, 77, 77, 1)
+                DisplayMode: =DisplayMode.View
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =galItemHeight
+                HintText: ="날짜"
+                OnChange: |
+                    =If(
+                        ThisItem.ID in colTaskUpdates.ID,
+                        Update(
+                            colTaskUpdates, 
+                            LookUp(colTaskUpdates, 
+                            ID = ThisItem.ID),
+                            { 
+                                ID: ThisItem.ID,
+                                Date: DateValue(txiDate.Text), 
+                                Line: txiLine.Text, 
+                                Type: txiType.Text, 
+                                PO: txiPO.Text, 
+                                ProductNo: txiProductNo.Text, 
+                                Shift: txiShift.Text, 
+                                Process: txiProcess.Text, 
+                                PartNo: txiPartNo.Text, 
+                                PartName: txiPartName.Text, 
+                                SN: txiSN.Text,
+                                Qty: Value(txiQty.Text),
+                                OData__x0044_iv1: drpDiv1.Selected.Value,
+                                OData__x0044_iv2: txiDiv2.Text, 
+                                ReworkTime: Value(txiReworkTime.Text),
+                                Worker: ForAll(cbbWorker.SelectedItems, 
+                                {
+                                    Id : ThisRecord.ID,
+                                    Value: ThisRecord.'이름 (OData__xc774__xb984_)'
+                                }
+                                )
+                    
+                               
+                            }
+                        ), 
+                        Collect(
+                            colTaskUpdates,
+                            { 
+                                ID: ThisItem.ID,
+                                Date: DateValue(txiDate.Text), 
+                                Line: txiLine.Text, 
+                                Type: txiType.Text, 
+                                PO: txiPO.Text, 
+                                ProductNo: txiProductNo.Text, 
+                                Shift: txiShift.Text, 
+                                Process: txiProcess.Text, 
+                                PartNo: txiPartNo.Text, 
+                                PartName: txiPartName.Text,
+                                SN: txiSN.Text, 
+                                Qty: Value(txiQty.Text),
+                                OData__x0044_iv1: drpDiv1.Selected.Value,
+                                OData__x0044_iv2: txiDiv2.Text, 
+                                ReworkTime: Value(txiReworkTime.Text),
+                                Worker: ForAll(cbbWorker.SelectedItems, 
+                                {
+                                    Id : ThisRecord.ID,
+                                    Value: ThisRecord.'이름 (OData__xc774__xb984_)'
+                                }
+                                )     
+                            }
+                        )
+                    )
+                OnSelect: =
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =galFontSize
+                TabIndex: =5
+                Width: =hdDate.Width
+                X: =lbID.X + lbID.Width
+                ZIndex: =5
+
+            lbID As label:
+                Align: =Align.Center
+                BorderColor: =RGBA(237, 237, 237, 1)
+                Color: =RGBA(77, 77, 77, 1)
+                DisabledColor: =RGBA(77, 77, 77, 1)
+                DisplayMode: =DisplayMode.View
+                FocusedBorderThickness: =5
+                Height: =galItemHeight
+                OnSelect: =Select(Parent)
+                PaddingRight: =7.25
+                PaddingTop: =7.25
+                Size: =galFontSize
+                Text: =ThisItem.ID
+                Width: =hdID.Width
+                ZIndex: =6
+
+            txiLine As text:
+                Align: =Align.Center
+                BorderColor: =RGBA(237, 237, 237, 1)
+                BorderThickness: =0
+                Default: |-
+                    =If(ThisItem.ID in colTaskUpdates.ID, 
+                        LookUp(colTaskUpdates, ID = ThisItem.ID, Line), 
+                        ThisItem.Line
+                    )
+                DisabledColor: =RGBA(77, 77, 77, 1)
+                DisplayMode: =DisplayMode.View
+                Height: =galItemHeight
+                HintText: ="라인"
+                OnChange: |
+                    =If(
+                        ThisItem.ID in colTaskUpdates.ID,
+                        Update(
+                            colTaskUpdates, 
+                            LookUp(colTaskUpdates, 
+                            ID = ThisItem.ID),
+                            { 
+                                ID: ThisItem.ID,
+                                Date: DateValue(txiDate.Text), 
+                                Line: txiLine.Text, 
+                                Type: txiType.Text, 
+                                PO: txiPO.Text, 
+                                ProductNo: txiProductNo.Text, 
+                                Shift: txiShift.Text, 
+                                Process: txiProcess.Text, 
+                                PartNo: txiPartNo.Text, 
+                                PartName: txiPartName.Text, 
+                                SN: txiSN.Text,
+                                Qty: Value(txiQty.Text),
+                                OData__x0044_iv1: drpDiv1.Selected.Value,
+                                OData__x0044_iv2: txiDiv2.Text, 
+                                ReworkTime: Value(txiReworkTime.Text),
+                                Worker: ForAll(cbbWorker.SelectedItems, 
+                                {
+                                    Id : ThisRecord.ID,
+                                    Value: ThisRecord.'이름 (OData__xc774__xb984_)'
+                                }
+                                )
+                    
+                               
+                            }
+                        ), 
+                        Collect(
+                            colTaskUpdates,
+                            { 
+                                ID: ThisItem.ID,
+                                Date: DateValue(txiDate.Text), 
+                                Line: txiLine.Text, 
+                                Type: txiType.Text, 
+                                PO: txiPO.Text, 
+                                ProductNo: txiProductNo.Text, 
+                                Shift: txiShift.Text, 
+                                Process: txiProcess.Text, 
+                                PartNo: txiPartNo.Text, 
+                                PartName: txiPartName.Text,
+                                SN: txiSN.Text, 
+                                Qty: Value(txiQty.Text),
+                                OData__x0044_iv1: drpDiv1.Selected.Value,
+                                OData__x0044_iv2: txiDiv2.Text, 
+                                ReworkTime: Value(txiReworkTime.Text),
+                                Worker: ForAll(cbbWorker.SelectedItems, 
+                                {
+                                    Id : ThisRecord.ID,
+                                    Value: ThisRecord.'이름 (OData__xc774__xb984_)'
+                                }
+                                )     
+                            }
+                        )
+                    )
+                OnSelect: =Select(Parent)
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =galFontSize
+                Width: =hdLine.Width
+                X: =txiDate.X + txiDate.Width
+                ZIndex: =7
+
+            txiType As text:
+                Align: =Align.Center
+                BorderColor: =RGBA(237, 237, 237, 1)
+                BorderThickness: =0
+                Default: |-
+                    =If(ThisItem.ID in colTaskUpdates.ID, 
+                        LookUp(colTaskUpdates, ID = ThisItem.ID, Type), 
+                        ThisItem.Type
+                    )
+                DisabledColor: =RGBA(77, 77, 77, 1)
+                DisplayMode: =DisplayMode.View
+                Height: =galItemHeight
+                HintText: ="제품타입"
+                OnChange: |
+                    =If(
+                        ThisItem.ID in colTaskUpdates.ID,
+                        Update(
+                            colTaskUpdates, 
+                            LookUp(colTaskUpdates, 
+                            ID = ThisItem.ID),
+                            { 
+                                ID: ThisItem.ID,
+                                Date: DateValue(txiDate.Text), 
+                                Line: txiLine.Text, 
+                                Type: txiType.Text, 
+                                PO: txiPO.Text, 
+                                ProductNo: txiProductNo.Text, 
+                                Shift: txiShift.Text, 
+                                Process: txiProcess.Text, 
+                                PartNo: txiPartNo.Text, 
+                                PartName: txiPartName.Text, 
+                                SN: txiSN.Text,
+                                Qty: Value(txiQty.Text),
+                                OData__x0044_iv1: drpDiv1.Selected.Value,
+                                OData__x0044_iv2: txiDiv2.Text, 
+                                ReworkTime: Value(txiReworkTime.Text),
+                                Worker: ForAll(cbbWorker.SelectedItems, 
+                                {
+                                    Id : ThisRecord.ID,
+                                    Value: ThisRecord.'이름 (OData__xc774__xb984_)'
+                                }
+                                )
+                    
+                               
+                            }
+                        ), 
+                        Collect(
+                            colTaskUpdates,
+                            { 
+                                ID: ThisItem.ID,
+                                Date: DateValue(txiDate.Text), 
+                                Line: txiLine.Text, 
+                                Type: txiType.Text, 
+                                PO: txiPO.Text, 
+                                ProductNo: txiProductNo.Text, 
+                                Shift: txiShift.Text, 
+                                Process: txiProcess.Text, 
+                                PartNo: txiPartNo.Text, 
+                                PartName: txiPartName.Text,
+                                SN: txiSN.Text, 
+                                Qty: Value(txiQty.Text),
+                                OData__x0044_iv1: drpDiv1.Selected.Value,
+                                OData__x0044_iv2: txiDiv2.Text, 
+                                ReworkTime: Value(txiReworkTime.Text),
+                                Worker: ForAll(cbbWorker.SelectedItems, 
+                                {
+                                    Id : ThisRecord.ID,
+                                    Value: ThisRecord.'이름 (OData__xc774__xb984_)'
+                                }
+                                )     
+                            }
+                        )
+                    )
+                OnSelect: =Select(Parent)
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =galFontSize
+                Width: =hdType.Width
+                X: =txiLine.X + txiLine.Width
+                ZIndex: =8
+
+            txiProcess As text:
+                BorderColor: =RGBA(237, 237, 237, 1)
+                BorderThickness: =0
+                Default: |-
+                    =If(ThisItem.ID in colTaskUpdates.ID, 
+                        LookUp(colTaskUpdates, ID = ThisItem.ID, Process), 
+                        ThisItem.Process
+                    )
+                DisabledColor: =RGBA(77, 77, 77, 1)
+                DisplayMode: =DisplayMode.View
+                Height: =galItemHeight
+                HintText: ="공정명"
+                Mode: =TextMode.MultiLine
+                OnChange: |
+                    =If(
+                        ThisItem.ID in colTaskUpdates.ID,
+                        Update(
+                            colTaskUpdates, 
+                            LookUp(colTaskUpdates, 
+                            ID = ThisItem.ID),
+                            { 
+                                ID: ThisItem.ID,
+                                Date: DateValue(txiDate.Text), 
+                                Line: txiLine.Text, 
+                                Type: txiType.Text, 
+                                PO: txiPO.Text, 
+                                ProductNo: txiProductNo.Text, 
+                                Shift: txiShift.Text, 
+                                Process: txiProcess.Text, 
+                                PartNo: txiPartNo.Text, 
+                                PartName: txiPartName.Text, 
+                                SN: txiSN.Text,
+                                Qty: Value(txiQty.Text),
+                                OData__x0044_iv1: drpDiv1.Selected.Value,
+                                OData__x0044_iv2: txiDiv2.Text, 
+                                ReworkTime: Value(txiReworkTime.Text),
+                                Worker: ForAll(cbbWorker.SelectedItems, 
+                                {
+                                    Id : ThisRecord.ID,
+                                    Value: ThisRecord.'이름 (OData__xc774__xb984_)'
+                                }
+                                )
+                    
+                               
+                            }
+                        ), 
+                        Collect(
+                            colTaskUpdates,
+                            { 
+                                ID: ThisItem.ID,
+                                Date: DateValue(txiDate.Text), 
+                                Line: txiLine.Text, 
+                                Type: txiType.Text, 
+                                PO: txiPO.Text, 
+                                ProductNo: txiProductNo.Text, 
+                                Shift: txiShift.Text, 
+                                Process: txiProcess.Text, 
+                                PartNo: txiPartNo.Text, 
+                                PartName: txiPartName.Text,
+                                SN: txiSN.Text, 
+                                Qty: Value(txiQty.Text),
+                                OData__x0044_iv1: drpDiv1.Selected.Value,
+                                OData__x0044_iv2: txiDiv2.Text, 
+                                ReworkTime: Value(txiReworkTime.Text),
+                                Worker: ForAll(cbbWorker.SelectedItems, 
+                                {
+                                    Id : ThisRecord.ID,
+                                    Value: ThisRecord.'이름 (OData__xc774__xb984_)'
+                                }
+                                )     
+                            }
+                        )
+                    )
+                OnSelect: =Select(Parent)
+                PaddingTop: =30
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =galFontSize
+                TabIndex: =6
+                Width: =hdProcess.Width
+                X: =txiShift.X + txiShift.Width
+                ZIndex: =9
+
+            txiShift As text:
+                BorderColor: =RGBA(237, 237, 237, 1)
+                BorderThickness: =0
+                Default: |-
+                    =If(ThisItem.ID in colTaskUpdates.ID, 
+                        LookUp(colTaskUpdates, ID = ThisItem.ID, Shift), 
+                        ThisItem.Shift
+                    )
+                DisabledColor: =RGBA(77, 77, 77, 1)
+                DisplayMode: =DisplayMode.View
+                Height: =galItemHeight
+                OnChange: |
+                    =If(
+                        ThisItem.ID in colTaskUpdates.ID,
+                        Update(
+                            colTaskUpdates, 
+                            LookUp(colTaskUpdates, 
+                            ID = ThisItem.ID),
+                            { 
+                                ID: ThisItem.ID,
+                                Date: DateValue(txiDate.Text), 
+                                Line: txiLine.Text, 
+                                Type: txiType.Text, 
+                                PO: txiPO.Text, 
+                                ProductNo: txiProductNo.Text, 
+                                Shift: txiShift.Text, 
+                                Process: txiProcess.Text, 
+                                PartNo: txiPartNo.Text, 
+                                PartName: txiPartName.Text, 
+                                SN: txiSN.Text,
+                                Qty: Value(txiQty.Text),
+                                OData__x0044_iv1: drpDiv1.Selected.Value,
+                                OData__x0044_iv2: txiDiv2.Text, 
+                                ReworkTime: Value(txiReworkTime.Text),
+                                Worker: ForAll(cbbWorker.SelectedItems, 
+                                {
+                                    Id : ThisRecord.ID,
+                                    Value: ThisRecord.'이름 (OData__xc774__xb984_)'
+                                }
+                                )
+                    
+                               
+                            }
+                        ), 
+                        Collect(
+                            colTaskUpdates,
+                            { 
+                                ID: ThisItem.ID,
+                                Date: DateValue(txiDate.Text), 
+                                Line: txiLine.Text, 
+                                Type: txiType.Text, 
+                                PO: txiPO.Text, 
+                                ProductNo: txiProductNo.Text, 
+                                Shift: txiShift.Text, 
+                                Process: txiProcess.Text, 
+                                PartNo: txiPartNo.Text, 
+                                PartName: txiPartName.Text,
+                                SN: txiSN.Text, 
+                                Qty: Value(txiQty.Text),
+                                OData__x0044_iv1: drpDiv1.Selected.Value,
+                                OData__x0044_iv2: txiDiv2.Text, 
+                                ReworkTime: Value(txiReworkTime.Text),
+                                Worker: ForAll(cbbWorker.SelectedItems, 
+                                {
+                                    Id : ThisRecord.ID,
+                                    Value: ThisRecord.'이름 (OData__xc774__xb984_)'
+                                }
+                                )     
+                            }
+                        )
+                    )
+                OnSelect: =Select(Parent)
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =galFontSize
+                TabIndex: =6
+                Width: =hdShift.Width
+                X: =txiRemark.X + txiRemark.Width
+                ZIndex: =10
+
+            txiPartNo As text:
+                BorderColor: =RGBA(237, 237, 237, 1)
+                BorderThickness: =0
+                Default: |-
+                    =If(ThisItem.ID in colTaskUpdates.ID, 
+                        LookUp(colTaskUpdates, ID = ThisItem.ID, PartNo), 
+                        ThisItem.PartNo
+                    )
+                DisabledColor: =RGBA(77, 77, 77, 1)
+                DisplayMode: =If(varEditFormVis = true, DisplayMode.View, DisplayMode.Edit)
+                Height: =galItemHeight
+                HintText: ="파트 번호"
+                Mode: =TextMode.MultiLine
+                OnChange: |
+                    =If(
+                        ThisItem.ID in colTaskUpdates.ID,
+                        Update(
+                            colTaskUpdates, 
+                            LookUp(colTaskUpdates, 
+                            ID = ThisItem.ID),
+                            { 
+                                ID: ThisItem.ID,
+                                Date: DateValue(txiDate.Text), 
+                                Line: txiLine.Text, 
+                                Type: txiType.Text, 
+                                PO: txiPO.Text, 
+                                ProductNo: txiProductNo.Text, 
+                                Shift: txiShift.Text, 
+                                Process: txiProcess.Text, 
+                                PartNo: txiPartNo.Text, 
+                                PartName: txiPartName.Text, 
+                                SN: txiSN.Text,
+                                Qty: Value(txiQty.Text),
+                                OData__x0044_iv1: drpDiv1.Selected.Value,
+                                OData__x0044_iv2: txiDiv2.Text, 
+                                ReworkTime: Value(txiReworkTime.Text),
+                                Worker: ForAll(cbbWorker.SelectedItems, 
+                                {
+                                    Id : ThisRecord.ID,
+                                    Value: ThisRecord.'이름 (OData__xc774__xb984_)'
+                                }),
+                                ActionTaken: txiActionTaken.Text
+                            }
+                        ), 
+                        Collect(
+                            colTaskUpdates,
+                            { 
+                                ID: ThisItem.ID,
+                                Date: DateValue(txiDate.Text), 
+                                Line: txiLine.Text, 
+                                Type: txiType.Text, 
+                                PO: txiPO.Text, 
+                                ProductNo: txiProductNo.Text, 
+                                Shift: txiShift.Text, 
+                                Process: txiProcess.Text, 
+                                PartNo: txiPartNo.Text, 
+                                PartName: txiPartName.Text,
+                                SN: txiSN.Text, 
+                                Qty: Value(txiQty.Text),
+                                OData__x0044_iv1: drpDiv1.Selected.Value,
+                                OData__x0044_iv2: txiDiv2.Text, 
+                                ReworkTime: Value(txiReworkTime.Text),
+                                Worker: ForAll(cbbWorker.SelectedItems, 
+                                {
+                                    Id : ThisRecord.ID,
+                                    Value: ThisRecord.'이름 (OData__xc774__xb984_)'
+                                }), 
+                                ActionTaken: txiActionTaken.Text
+                                     
+                            }
+                        )
+                    )
+                OnSelect: =Select(Parent)
+                PaddingTop: =30
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =galFontSize
+                TabIndex: =6
+                Width: =hdPartNo.Width
+                X: =txiProcess.X + txiProcess.Width
+                ZIndex: =11
+
+            txiPartName As text:
+                BorderColor: =RGBA(237, 237, 237, 1)
+                BorderThickness: =0
+                Default: |-
+                    =If(ThisItem.ID in colTaskUpdates.ID, 
+                        LookUp(colTaskUpdates, ID = ThisItem.ID, PartName), 
+                        ThisItem.PartName
+                    )
+                DisabledColor: =RGBA(77, 77, 77, 1)
+                DisplayMode: =If(varEditFormVis = true, DisplayMode.View, DisplayMode.Edit)
+                Height: =galItemHeight
+                HintText: ="파트 이름"
+                Mode: =TextMode.MultiLine
+                OnChange: |
+                    =If(
+                        ThisItem.ID in colTaskUpdates.ID,
+                        Update(
+                            colTaskUpdates, 
+                            LookUp(colTaskUpdates, 
+                            ID = ThisItem.ID),
+                            { 
+                                ID: ThisItem.ID,
+                                Date: DateValue(txiDate.Text), 
+                                Line: txiLine.Text, 
+                                Type: txiType.Text, 
+                                PO: txiPO.Text, 
+                                ProductNo: txiProductNo.Text, 
+                                Shift: txiShift.Text, 
+                                Process: txiProcess.Text, 
+                                PartNo: txiPartNo.Text, 
+                                PartName: txiPartName.Text, 
+                                SN: txiSN.Text,
+                                Qty: Value(txiQty.Text),
+                                OData__x0044_iv1: drpDiv1.Selected.Value,
+                                OData__x0044_iv2: txiDiv2.Text, 
+                                ReworkTime: Value(txiReworkTime.Text),
+                                Worker: ForAll(cbbWorker.SelectedItems, 
+                                {
+                                    Id : ThisRecord.ID,
+                                    Value: ThisRecord.'이름 (OData__xc774__xb984_)'
+                                }),
+                                ActionTaken: txiActionTaken.Text
+                            }
+                        ), 
+                        Collect(
+                            colTaskUpdates,
+                            { 
+                                ID: ThisItem.ID,
+                                Date: DateValue(txiDate.Text), 
+                                Line: txiLine.Text, 
+                                Type: txiType.Text, 
+                                PO: txiPO.Text, 
+                                ProductNo: txiProductNo.Text, 
+                                Shift: txiShift.Text, 
+                                Process: txiProcess.Text, 
+                                PartNo: txiPartNo.Text, 
+                                PartName: txiPartName.Text,
+                                SN: txiSN.Text, 
+                                Qty: Value(txiQty.Text),
+                                OData__x0044_iv1: drpDiv1.Selected.Value,
+                                OData__x0044_iv2: txiDiv2.Text, 
+                                ReworkTime: Value(txiReworkTime.Text),
+                                Worker: ForAll(cbbWorker.SelectedItems, 
+                                {
+                                    Id : ThisRecord.ID,
+                                    Value: ThisRecord.'이름 (OData__xc774__xb984_)'
+                                }), 
+                                ActionTaken: txiActionTaken.Text
+                                     
+                            }
+                        )
+                    )
+                OnSelect: =Select(Parent)
+                PaddingTop: =30
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =galFontSize
+                TabIndex: =6
+                Width: =hdPartName.Width
+                X: =txiPartNo.X + txiPartNo.Width
+                ZIndex: =12
+
+            txiQty As text:
+                Align: =Align.Center
+                BorderColor: =RGBA(237, 237, 237, 1)
+                BorderThickness: =0
+                Default: |-
+                    =If(ThisItem.ID in colTaskUpdates.ID, 
+                        LookUp(colTaskUpdates, ID = ThisItem.ID, Qty), 
+                        ThisItem.Qty
+                    )
+                DisabledColor: =RGBA(77, 77, 77, 1)
+                DisplayMode: =If(varEditFormVis = true, DisplayMode.View, DisplayMode.Edit)
+                Format: =TextFormat.Number
+                Height: =galItemHeight
+                HintText: ="수량"
+                OnChange: |
+                    =If(
+                        ThisItem.ID in colTaskUpdates.ID,
+                        Update(
+                            colTaskUpdates, 
+                            LookUp(colTaskUpdates, 
+                            ID = ThisItem.ID),
+                            { 
+                                ID: ThisItem.ID,
+                                Date: DateValue(txiDate.Text), 
+                                Line: txiLine.Text, 
+                                Type: txiType.Text, 
+                                PO: txiPO.Text, 
+                                ProductNo: txiProductNo.Text, 
+                                Shift: txiShift.Text, 
+                                Process: txiProcess.Text, 
+                                PartNo: txiPartNo.Text, 
+                                PartName: txiPartName.Text, 
+                                SN: txiSN.Text,
+                                Qty: Value(txiQty.Text),
+                                OData__x0044_iv1: drpDiv1.Selected.Value,
+                                OData__x0044_iv2: txiDiv2.Text, 
+                                ReworkTime: Value(txiReworkTime.Text),
+                                Worker: ForAll(cbbWorker.SelectedItems, 
+                                {
+                                    Id : ThisRecord.ID,
+                                    Value: ThisRecord.'이름 (OData__xc774__xb984_)'
+                                }),
+                                ActionTaken: txiActionTaken.Text
+                            }
+                        ), 
+                        Collect(
+                            colTaskUpdates,
+                            { 
+                                ID: ThisItem.ID,
+                                Date: DateValue(txiDate.Text), 
+                                Line: txiLine.Text, 
+                                Type: txiType.Text, 
+                                PO: txiPO.Text, 
+                                ProductNo: txiProductNo.Text, 
+                                Shift: txiShift.Text, 
+                                Process: txiProcess.Text, 
+                                PartNo: txiPartNo.Text, 
+                                PartName: txiPartName.Text,
+                                SN: txiSN.Text, 
+                                Qty: Value(txiQty.Text),
+                                OData__x0044_iv1: drpDiv1.Selected.Value,
+                                OData__x0044_iv2: txiDiv2.Text, 
+                                ReworkTime: Value(txiReworkTime.Text),
+                                Worker: ForAll(cbbWorker.SelectedItems, 
+                                {
+                                    Id : ThisRecord.ID,
+                                    Value: ThisRecord.'이름 (OData__xc774__xb984_)'
+                                }), 
+                                ActionTaken: txiActionTaken.Text
+                                     
+                            }
+                        )
+                    )
+                OnSelect: =Select(Parent)
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =galFontSize
+                TabIndex: =6
+                Width: =hdQty.Width
+                X: =recImg.X + recImg.Width
+                ZIndex: =13
+
+            txiDiv2 As text:
+                BorderColor: =RGBA(237, 237, 237, 1)
+                BorderThickness: =0
+                Default: |-
+                    =If(ThisItem.ID in colTaskUpdates.ID, 
+                        LookUp(colTaskUpdates, ID = ThisItem.ID, OData__x0044_iv2), 
+                        ThisItem.Div2
+                    )
+                DisabledColor: =RGBA(77, 77, 77, 1)
+                DisplayMode: =If(varEditFormVis = true, DisplayMode.View, DisplayMode.Edit)
+                Height: =galItemHeight
+                HintText: ="유형2"
+                Mode: =TextMode.MultiLine
+                OnChange: |
+                    =If(
+                        ThisItem.ID in colTaskUpdates.ID,
+                        Update(
+                            colTaskUpdates, 
+                            LookUp(colTaskUpdates, 
+                            ID = ThisItem.ID),
+                            { 
+                                ID: ThisItem.ID,
+                                Date: DateValue(txiDate.Text), 
+                                Line: txiLine.Text, 
+                                Type: txiType.Text, 
+                                PO: txiPO.Text, 
+                                ProductNo: txiProductNo.Text, 
+                                Shift: txiShift.Text, 
+                                Process: txiProcess.Text, 
+                                PartNo: txiPartNo.Text, 
+                                PartName: txiPartName.Text, 
+                                SN: txiSN.Text,
+                                Qty: Value(txiQty.Text),
+                                OData__x0044_iv1: drpDiv1.Selected.Value,
+                                OData__x0044_iv2: txiDiv2.Text, 
+                                ReworkTime: Value(txiReworkTime.Text),
+                                Worker: ForAll(cbbWorker.SelectedItems, 
+                                {
+                                    Id : ThisRecord.ID,
+                                    Value: ThisRecord.'이름 (OData__xc774__xb984_)'
+                                }),
+                                ActionTaken: txiActionTaken.Text
+                            }
+                        ), 
+                        Collect(
+                            colTaskUpdates,
+                            { 
+                                ID: ThisItem.ID,
+                                Date: DateValue(txiDate.Text), 
+                                Line: txiLine.Text, 
+                                Type: txiType.Text, 
+                                PO: txiPO.Text, 
+                                ProductNo: txiProductNo.Text, 
+                                Shift: txiShift.Text, 
+                                Process: txiProcess.Text, 
+                                PartNo: txiPartNo.Text, 
+                                PartName: txiPartName.Text,
+                                SN: txiSN.Text, 
+                                Qty: Value(txiQty.Text),
+                                OData__x0044_iv1: drpDiv1.Selected.Value,
+                                OData__x0044_iv2: txiDiv2.Text, 
+                                ReworkTime: Value(txiReworkTime.Text),
+                                Worker: ForAll(cbbWorker.SelectedItems, 
+                                {
+                                    Id : ThisRecord.ID,
+                                    Value: ThisRecord.'이름 (OData__xc774__xb984_)'
+                                }), 
+                                ActionTaken: txiActionTaken.Text
+                                     
+                            }
+                        )
+                    )
+                OnSelect: =Select(Parent)
+                PaddingTop: =30
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =galFontSize
+                TabIndex: =6
+                Width: =hdDiv2.Width
+                X: =drpDiv1.X + drpDiv1.Width
+                ZIndex: =14
+
+            txiReworkTime As text:
+                Align: =Align.Center
+                BorderColor: =RGBA(237, 237, 237, 1)
+                BorderThickness: =0
+                Default: |-
+                    =If(ThisItem.ID in colTaskUpdates.ID, 
+                        LookUp(colTaskUpdates, ID = ThisItem.ID, ReworkTime), 
+                        ThisItem.ReworkTime
+                    )
+                DisabledColor: =RGBA(77, 77, 77, 1)
+                DisplayMode: =If(varEditFormVis = true, DisplayMode.View, DisplayMode.Edit)
+                Format: =TextFormat.Number
+                Height: =galItemHeight
+                HintText: ="시간(분)"
+                OnChange: |
+                    =If(
+                        ThisItem.ID in colTaskUpdates.ID,
+                        Update(
+                            colTaskUpdates, 
+                            LookUp(colTaskUpdates, 
+                            ID = ThisItem.ID),
+                            { 
+                                ID: ThisItem.ID,
+                                Date: DateValue(txiDate.Text), 
+                                Line: txiLine.Text, 
+                                Type: txiType.Text, 
+                                PO: txiPO.Text, 
+                                ProductNo: txiProductNo.Text, 
+                                Shift: txiShift.Text, 
+                                Process: txiProcess.Text, 
+                                PartNo: txiPartNo.Text, 
+                                PartName: txiPartName.Text, 
+                                SN: txiSN.Text,
+                                Qty: Value(txiQty.Text),
+                                OData__x0044_iv1: drpDiv1.Selected.Value,
+                                OData__x0044_iv2: txiDiv2.Text, 
+                                ReworkTime: Value(txiReworkTime.Text),
+                                Worker: ForAll(cbbWorker.SelectedItems, 
+                                {
+                                    Id : ThisRecord.ID,
+                                    Value: ThisRecord.'이름 (OData__xc774__xb984_)'
+                                }),
+                                ActionTaken: txiActionTaken.Text
+                            }
+                        ), 
+                        Collect(
+                            colTaskUpdates,
+                            { 
+                                ID: ThisItem.ID,
+                                Date: DateValue(txiDate.Text), 
+                                Line: txiLine.Text, 
+                                Type: txiType.Text, 
+                                PO: txiPO.Text, 
+                                ProductNo: txiProductNo.Text, 
+                                Shift: txiShift.Text, 
+                                Process: txiProcess.Text, 
+                                PartNo: txiPartNo.Text, 
+                                PartName: txiPartName.Text,
+                                SN: txiSN.Text, 
+                                Qty: Value(txiQty.Text),
+                                OData__x0044_iv1: drpDiv1.Selected.Value,
+                                OData__x0044_iv2: txiDiv2.Text, 
+                                ReworkTime: Value(txiReworkTime.Text),
+                                Worker: ForAll(cbbWorker.SelectedItems, 
+                                {
+                                    Id : ThisRecord.ID,
+                                    Value: ThisRecord.'이름 (OData__xc774__xb984_)'
+                                }), 
+                                ActionTaken: txiActionTaken.Text
+                                     
+                            }
+                        )
+                    )
+                OnSelect: =Select(Parent)
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =galFontSize
+                TabIndex: =6
+                Width: =hdReworkTime.Width
+                X: =txiDiv2.X + txiDiv2.Width
+                ZIndex: =15
+
+            cbbWorker As combobox:
+                BorderColor: =RGBA(237, 237, 237, 1)
+                BorderThickness: =0
+                ChevronBackground: =RGBA(166, 166, 166, 1)
+                DisplayFields: =["OData__xc774__xb984_"]
+                DisplayMode: =If(varEditFormVis = true, DisplayMode.View, DisplayMode.Edit)
+                Height: =galItemHeight
+                InputTextPlaceholder: =
+                Items: |-
+                    =Filter(
+                        '[HR_01]인사 정보',
+                        퇴사일 = Blank() && Line.Value = txiLine.Text)
+                OnChange: |
+                    =If(
+                        ThisItem.ID in colTaskUpdates.ID,
+                        Update(
+                            colTaskUpdates, 
+                            LookUp(colTaskUpdates, 
+                            ID = ThisItem.ID),
+                            { 
+                                ID: ThisItem.ID,
+                                Date: DateValue(txiDate.Text), 
+                                Line: txiLine.Text, 
+                                Type: txiType.Text, 
+                                PO: txiPO.Text, 
+                                ProductNo: txiProductNo.Text, 
+                                Shift: txiShift.Text, 
+                                Process: txiProcess.Text, 
+                                PartNo: txiPartNo.Text, 
+                                PartName: txiPartName.Text, 
+                                SN: txiSN.Text,
+                                Qty: Value(txiQty.Text),
+                                OData__x0044_iv1: drpDiv1.Selected.Value,
+                                OData__x0044_iv2: txiDiv2.Text, 
+                                ReworkTime: Value(txiReworkTime.Text),
+                                Worker: ForAll(cbbWorker.SelectedItems, 
+                                {
+                                    Id : ThisRecord.ID,
+                                    Value: ThisRecord.'이름 (OData__xc774__xb984_)'
+                                }),
+                                ActionTaken: txiActionTaken.Text
+                            }
+                        ), 
+                        Collect(
+                            colTaskUpdates,
+                            { 
+                                ID: ThisItem.ID,
+                                Date: DateValue(txiDate.Text), 
+                                Line: txiLine.Text, 
+                                Type: txiType.Text, 
+                                PO: txiPO.Text, 
+                                ProductNo: txiProductNo.Text, 
+                                Shift: txiShift.Text, 
+                                Process: txiProcess.Text, 
+                                PartNo: txiPartNo.Text, 
+                                PartName: txiPartName.Text,
+                                SN: txiSN.Text, 
+                                Qty: Value(txiQty.Text),
+                                OData__x0044_iv1: drpDiv1.Selected.Value,
+                                OData__x0044_iv2: txiDiv2.Text, 
+                                ReworkTime: Value(txiReworkTime.Text),
+                                Worker: ForAll(cbbWorker.SelectedItems, 
+                                {
+                                    Id : ThisRecord.ID,
+                                    Value: ThisRecord.'이름 (OData__xc774__xb984_)'
+                                }), 
+                                ActionTaken: txiActionTaken.Text
+                                     
+                            }
+                        )
+                    )
+                OnSelect: =Select(Parent)
+                SearchFields: =["OData__xbe44__xace0_"]
+                SearchItems: =Search(Filter('[HR_01]인사 정보',퇴사일=Blank()&&Line.Value=txiLine.Text),cbbWorker.SearchText,OData__xbe44__xace0_)
+                Size: =galFontSize
+                Width: =hdWorker.Width
+                X: =txiReworkTime.X + txiReworkTime.Width
+                ZIndex: =17
+
+            recImg As rectangle:
+                BorderColor: =RGBA(237, 237, 237, 1)
+                DisplayMode: =If(varEditFormVis = true, DisplayMode.View, DisplayMode.Edit)
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =lbID.Height
+                OnSelect: =
+                Width: =hdPicture.Width
+                X: =txiSN.X + txiSN.Width
+                ZIndex: =18
+
+            lbWorker As label:
+                BorderStyle: =BorderStyle.None
+                DisplayMode: =If(varEditFormVis = true, DisplayMode.View, DisplayMode.Edit)
+                Fill: =RGBA(255, 255, 255, 1)
+                Height: =galItemHeight - 10
+                OnSelect: =Select(Parent)
+                Size: =galFontSize
+                Text: =If(IsBlank(cbbWorker.SelectedItems), Concat( ThisItem.Worker, Value, ", "), Concat(cbbWorker.SelectedItems, '이름 (OData__xc774__xb984_)', ", "))
+                Width: |
+                    =hdWorker.Width - 40
+                X: =txiReworkTime.X + txiReworkTime.Width + 3
+                Y: |
+                    =5
+                ZIndex: =20
+
+            drpDiv1 As dropdown:
+                BorderColor: =RGBA(237, 237, 237, 1)
+                BorderThickness: =0
+                ChevronBackground: =RGBA(166, 166, 166, 1)
+                Default: |-
+                    =If(ThisItem.ID in colTaskUpdates.ID, 
+                        LookUp(colTaskUpdates, ID = ThisItem.ID, OData__x0044_iv1), 
+                        ThisItem.Div1
+                    )
+                DisplayMode: =If(varEditFormVis = true, DisplayMode.View, DisplayMode.Edit)
+                Height: =galItemHeight
+                Items: =["작업불량","원자재불량","설비불량","OQC", "원인미상"]
+                OnChange: |
+                    =If(
+                        ThisItem.ID in colTaskUpdates.ID,
+                        Update(
+                            colTaskUpdates, 
+                            LookUp(colTaskUpdates, 
+                            ID = ThisItem.ID),
+                            { 
+                                ID: ThisItem.ID,
+                                Date: DateValue(txiDate.Text), 
+                                Line: txiLine.Text, 
+                                Type: txiType.Text, 
+                                PO: txiPO.Text, 
+                                ProductNo: txiProductNo.Text, 
+                                Shift: txiShift.Text, 
+                                Process: txiProcess.Text, 
+                                PartNo: txiPartNo.Text, 
+                                PartName: txiPartName.Text, 
+                                SN: txiSN.Text,
+                                Qty: Value(txiQty.Text),
+                                OData__x0044_iv1: drpDiv1.Selected.Value,
+                                OData__x0044_iv2: txiDiv2.Text, 
+                                ReworkTime: Value(txiReworkTime.Text),
+                                Worker: ForAll(cbbWorker.SelectedItems, 
+                                {
+                                    Id : ThisRecord.ID,
+                                    Value: ThisRecord.'이름 (OData__xc774__xb984_)'
+                                }),
+                                ActionTaken: txiActionTaken.Text
+                            }
+                        ), 
+                        Collect(
+                            colTaskUpdates,
+                            { 
+                                ID: ThisItem.ID,
+                                Date: DateValue(txiDate.Text), 
+                                Line: txiLine.Text, 
+                                Type: txiType.Text, 
+                                PO: txiPO.Text, 
+                                ProductNo: txiProductNo.Text, 
+                                Shift: txiShift.Text, 
+                                Process: txiProcess.Text, 
+                                PartNo: txiPartNo.Text, 
+                                PartName: txiPartName.Text,
+                                SN: txiSN.Text, 
+                                Qty: Value(txiQty.Text),
+                                OData__x0044_iv1: drpDiv1.Selected.Value,
+                                OData__x0044_iv2: txiDiv2.Text, 
+                                ReworkTime: Value(txiReworkTime.Text),
+                                Worker: ForAll(cbbWorker.SelectedItems, 
+                                {
+                                    Id : ThisRecord.ID,
+                                    Value: ThisRecord.'이름 (OData__xc774__xb984_)'
+                                }), 
+                                ActionTaken: txiActionTaken.Text
+                                     
+                            }
+                        )
+                    )
+                OnSelect: =Select(Parent)
+                Size: =galFontSize
+                Width: =hdDiv1.Width
+                X: =txiQty.X + txiQty.Width
+                Y: |
+                    =0
+                ZIndex: =21
+
+            divider1 As groupContainer.manualLayoutContainer:
+                DropShadow: =DropShadow.None
+                Fill: =RGBA(237, 237, 237, 1)
+                Height: =galItemHeight
+                Width: =1
+                X: =lbID.X
+                Y: |
+                    =0
+                ZIndex: =22
+
+            divider1_1 As groupContainer.manualLayoutContainer:
+                DropShadow: =DropShadow.None
+                Fill: =RGBA(237, 237, 237, 1)
+                Height: =galItemHeight
+                Visible: =varGridEditable
+                Width: =1
+                X: =txiDate.X
+                ZIndex: =23
+
+            divider1_2 As groupContainer.manualLayoutContainer:
+                DropShadow: =DropShadow.None
+                Fill: =RGBA(237, 237, 237, 1)
+                Height: =galItemHeight
+                Visible: =varGridEditable
+                Width: =1
+                X: =txiLine.X
+                ZIndex: =24
+
+            divider1_3 As groupContainer.manualLayoutContainer:
+                DropShadow: =DropShadow.None
+                Fill: =RGBA(237, 237, 237, 1)
+                Height: =galItemHeight
+                Visible: =varGridEditable
+                Width: =1
+                X: =txiType.X
+                ZIndex: =25
+
+            divider1_4 As groupContainer.manualLayoutContainer:
+                DropShadow: =DropShadow.None
+                Fill: =RGBA(237, 237, 237, 1)
+                Height: =galItemHeight
+                Visible: =varGridEditable
+                Width: =1
+                X: =txiPO.X
+                ZIndex: =26
+
+            divider1_5 As groupContainer.manualLayoutContainer:
+                DropShadow: =DropShadow.None
+                Fill: =RGBA(237, 237, 237, 1)
+                Height: =galItemHeight
+                Visible: =varGridEditable
+                Width: =1
+                X: =txiProductNo.X
+                ZIndex: =27
+
+            divider1_6 As groupContainer.manualLayoutContainer:
+                DropShadow: =DropShadow.None
+                Fill: =RGBA(237, 237, 237, 1)
+                Height: =galItemHeight
+                Visible: =varGridEditable
+                Width: =1
+                X: =txiRemark.X
+                ZIndex: =28
+
+            divider1_7 As groupContainer.manualLayoutContainer:
+                DropShadow: =DropShadow.None
+                Fill: =RGBA(237, 237, 237, 1)
+                Height: =galItemHeight
+                Visible: =varGridEditable
+                Width: =1
+                X: =txiShift.X
+                ZIndex: =29
+
+            divider1_8 As groupContainer.manualLayoutContainer:
+                DropShadow: =DropShadow.None
+                Fill: =RGBA(237, 237, 237, 1)
+                Height: =galItemHeight
+                Visible: =varGridEditable
+                Width: =1
+                X: =txiProcess.X
+                ZIndex: =30
+
+            divider1_9 As groupContainer.manualLayoutContainer:
+                DropShadow: =DropShadow.None
+                Fill: =RGBA(237, 237, 237, 1)
+                Height: =galItemHeight
+                Visible: =varGridEditable
+                Width: =1
+                X: =txiPartNo.X
+                ZIndex: =31
+
+            divider1_10 As groupContainer.manualLayoutContainer:
+                DropShadow: =DropShadow.None
+                Fill: =RGBA(237, 237, 237, 1)
+                Height: =galItemHeight
+                Visible: =varGridEditable
+                Width: =1
+                X: =txiPartName.X
+                ZIndex: =32
+
+            divider1_11 As groupContainer.manualLayoutContainer:
+                DropShadow: =DropShadow.None
+                Fill: =RGBA(237, 237, 237, 1)
+                Height: =galItemHeight
+                Visible: =varGridEditable
+                Width: =1
+                X: =recImg.X
+                ZIndex: =33
+
+            divider1_12 As groupContainer.manualLayoutContainer:
+                DropShadow: =DropShadow.None
+                Fill: =RGBA(237, 237, 237, 1)
+                Height: =galItemHeight
+                Visible: =varGridEditable
+                Width: =1
+                X: =txiQty.X
+                ZIndex: =34
+
+            divider1_13 As groupContainer.manualLayoutContainer:
+                DropShadow: =DropShadow.None
+                Fill: =RGBA(237, 237, 237, 1)
+                Height: =galItemHeight
+                Visible: =varGridEditable
+                Width: =1
+                X: =drpDiv1.X
+                ZIndex: =35
+
+            divider1_15 As groupContainer.manualLayoutContainer:
+                DropShadow: =DropShadow.None
+                Fill: =RGBA(237, 237, 237, 1)
+                Height: =galItemHeight
+                Visible: =varGridEditable
+                Width: =1
+                X: =txiReworkTime.X
+                ZIndex: =36
+
+            divider1_16 As groupContainer.manualLayoutContainer:
+                DropShadow: =DropShadow.None
+                Fill: =RGBA(237, 237, 237, 1)
+                Height: =galItemHeight
+                Visible: =varGridEditable
+                Width: =1
+                X: =cbbWorker.X
+                ZIndex: =37
+
+            divider1_17 As groupContainer.manualLayoutContainer:
+                DropShadow: =DropShadow.None
+                Fill: =RGBA(237, 237, 237, 1)
+                Height: =galItemHeight
+                Visible: =varGridEditable
+                Width: =1
+                X: =txiSN.X
+                ZIndex: =38
+
+            divider1_18 As groupContainer.manualLayoutContainer:
+                DropShadow: =DropShadow.None
+                Fill: =RGBA(237, 237, 237, 1)
+                Height: =galItemHeight
+                Visible: =varGridEditable
+                Width: =1
+                X: =trashIcon_def.X + trashIcon_def.Width
+                ZIndex: =39
+
+            txiSN As text:
+                BorderColor: =RGBA(237, 237, 237, 1)
+                BorderThickness: =0
+                Default: |-
+                    =If(ThisItem.ID in colTaskUpdates.ID, 
+                        LookUp(colTaskUpdates, ID = ThisItem.ID, SN), 
+                        ThisItem.SN
+                    )
+                DisabledColor: =RGBA(77, 77, 77, 1)
+                DisplayMode: =If(varEditFormVis = true, DisplayMode.View, DisplayMode.Edit)
+                Height: =galItemHeight
+                HintText: ="Serial No"
+                Mode: =TextMode.MultiLine
+                OnChange: |
+                    =If(
+                        ThisItem.ID in colTaskUpdates.ID,
+                        Update(
+                            colTaskUpdates, 
+                            LookUp(colTaskUpdates, 
+                            ID = ThisItem.ID),
+                            { 
+                                ID: ThisItem.ID,
+                                Date: DateValue(txiDate.Text), 
+                                Line: txiLine.Text, 
+                                Type: txiType.Text, 
+                                PO: txiPO.Text, 
+                                ProductNo: txiProductNo.Text, 
+                                Shift: txiShift.Text, 
+                                Process: txiProcess.Text, 
+                                PartNo: txiPartNo.Text, 
+                                PartName: txiPartName.Text, 
+                                SN: txiSN.Text,
+                                Qty: Value(txiQty.Text),
+                                OData__x0044_iv1: drpDiv1.Selected.Value,
+                                OData__x0044_iv2: txiDiv2.Text, 
+                                ReworkTime: Value(txiReworkTime.Text),
+                                Worker: ForAll(cbbWorker.SelectedItems, 
+                                {
+                                    Id : ThisRecord.ID,
+                                    Value: ThisRecord.'이름 (OData__xc774__xb984_)'
+                                }),
+                                ActionTaken: txiActionTaken.Text
+                            }
+                        ), 
+                        Collect(
+                            colTaskUpdates,
+                            { 
+                                ID: ThisItem.ID,
+                                Date: DateValue(txiDate.Text), 
+                                Line: txiLine.Text, 
+                                Type: txiType.Text, 
+                                PO: txiPO.Text, 
+                                ProductNo: txiProductNo.Text, 
+                                Shift: txiShift.Text, 
+                                Process: txiProcess.Text, 
+                                PartNo: txiPartNo.Text, 
+                                PartName: txiPartName.Text,
+                                SN: txiSN.Text, 
+                                Qty: Value(txiQty.Text),
+                                OData__x0044_iv1: drpDiv1.Selected.Value,
+                                OData__x0044_iv2: txiDiv2.Text, 
+                                ReworkTime: Value(txiReworkTime.Text),
+                                Worker: ForAll(cbbWorker.SelectedItems, 
+                                {
+                                    Id : ThisRecord.ID,
+                                    Value: ThisRecord.'이름 (OData__xc774__xb984_)'
+                                }), 
+                                ActionTaken: txiActionTaken.Text
+                                     
+                            }
+                        )
+                    )
+                OnSelect: =Select(Parent)
+                PaddingTop: =30
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =galFontSize
+                TabIndex: =6
+                Width: =hdSN.Width
+                X: =txiPartName.X + txiPartName.Width
+                ZIndex: =40
+
+            divider1_19 As groupContainer.manualLayoutContainer:
+                DropShadow: =DropShadow.None
+                Fill: =RGBA(237, 237, 237, 1)
+                Height: |
+                    =1
+                Visible: =varGridEditable
+                Width: =contHeader_def.Width
+                X: |
+                    =0
+                Y: =galItemHeight
+                ZIndex: =41
+
+            divider1_20 As groupContainer.manualLayoutContainer:
+                DropShadow: =DropShadow.None
+                Fill: =RGBA(237, 237, 237, 1)
+                Height: =galItemHeight
+                Visible: =varGridEditable
+                Width: =1
+                X: =txiPartName.X + txiPartName.Width
+                ZIndex: =42
+
+            txiActionTaken As text:
+                BorderColor: =RGBA(237, 237, 237, 1)
+                BorderThickness: =0
+                Default: |-
+                    =If(ThisItem.ID in colTaskUpdates.ID, 
+                        LookUp(colTaskUpdates, ID = ThisItem.ID, ActionTaken), 
+                        ThisItem.ActionTaken
+                    )
+                DisabledColor: =RGBA(77, 77, 77, 1)
+                DisplayMode: =If(varEditFormVis = true, DisplayMode.View, DisplayMode.Edit)
+                Height: =galItemHeight
+                HintText: ="조치 내역"
+                Mode: =TextMode.MultiLine
+                OnChange: |
+                    =If(
+                        ThisItem.ID in colTaskUpdates.ID,
+                        Update(
+                            colTaskUpdates, 
+                            LookUp(colTaskUpdates, 
+                            ID = ThisItem.ID),
+                            { 
+                                ID: ThisItem.ID,
+                                Date: DateValue(txiDate.Text), 
+                                Line: txiLine.Text, 
+                                Type: txiType.Text, 
+                                PO: txiPO.Text, 
+                                ProductNo: txiProductNo.Text, 
+                                Shift: txiShift.Text, 
+                                Process: txiProcess.Text, 
+                                PartNo: txiPartNo.Text, 
+                                PartName: txiPartName.Text, 
+                                SN: txiSN.Text,
+                                Qty: Value(txiQty.Text),
+                                OData__x0044_iv1: drpDiv1.Selected.Value,
+                                OData__x0044_iv2: txiDiv2.Text, 
+                                ReworkTime: Value(txiReworkTime.Text),
+                                Worker: ForAll(cbbWorker.SelectedItems, 
+                                {
+                                    Id : ThisRecord.ID,
+                                    Value: ThisRecord.'이름 (OData__xc774__xb984_)'
+                                }),
+                                ActionTaken: txiActionTaken.Text
+                            }
+                        ), 
+                        Collect(
+                            colTaskUpdates,
+                            { 
+                                ID: ThisItem.ID,
+                                Date: DateValue(txiDate.Text), 
+                                Line: txiLine.Text, 
+                                Type: txiType.Text, 
+                                PO: txiPO.Text, 
+                                ProductNo: txiProductNo.Text, 
+                                Shift: txiShift.Text, 
+                                Process: txiProcess.Text, 
+                                PartNo: txiPartNo.Text, 
+                                PartName: txiPartName.Text,
+                                SN: txiSN.Text, 
+                                Qty: Value(txiQty.Text),
+                                OData__x0044_iv1: drpDiv1.Selected.Value,
+                                OData__x0044_iv2: txiDiv2.Text, 
+                                ReworkTime: Value(txiReworkTime.Text),
+                                Worker: ForAll(cbbWorker.SelectedItems, 
+                                {
+                                    Id : ThisRecord.ID,
+                                    Value: ThisRecord.'이름 (OData__xc774__xb984_)'
+                                }), 
+                                ActionTaken: txiActionTaken.Text
+                                     
+                            }
+                        )
+                    )
+                OnSelect: =Select(Parent)
+                PaddingTop: =30
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =galFontSize
+                TabIndex: =6
+                Width: =hdActionTaken.Width
+                X: =cbbWorker.X + cbbWorker.Width
+                ZIndex: =43
+
+            divider1_65 As groupContainer.manualLayoutContainer:
+                DropShadow: =DropShadow.None
+                Fill: =RGBA(237, 237, 237, 1)
+                Height: =galItemHeight
+                Visible: =varGridEditable
+                Width: =1
+                X: =trashIcon_def.X
+                ZIndex: =44
+
+            grpAddImg As group:
+                Height: =5
+                Width: =5
+                X: =80
+                Y: =80
+                ZIndex: =45
+
+                imgPic As image:
+                    BorderColor: =RGBA(237, 237, 237, 1)
+                    BorderStyle: =BorderStyle.None
+                    Height: =lbID.Height - 20
+                    Image: =ThisItem.Picture
+                    ImagePosition: =ImagePosition.Stretch
+                    OnSelect: |-
+                        =Patch( 
+                            _productionRecord, 
+                            colTaskUpdates);
+                        
+                            Set(varEditFormVis, true);
+                            Set(varItem, ThisItem);
+                            Set(varShowConfirm, false)
+                    RadiusBottomLeft: =20
+                    RadiusBottomRight: =20
+                    RadiusTopLeft: =20
+                    RadiusTopRight: =20
+                    Width: =hdPicture.Width - 20
+                    X: =txiSN.X + txiSN.Width + 10
+                    Y: =10
+                    ZIndex: =16
+
+                addImgIcon As icon.Add:
+                    BorderStyle: =BorderStyle.None
+                    Color: =RGBA(219, 219, 219, 1)
+                    Height: =40
+                    Icon: =Icon.Add
+                    OnSelect: |-
+                        =If(
+                            IsBlank(
+                                cbbWorker.SelectedItems), 
+                                    Concurrent(
+                                        Set(varEditFormVis, true),
+                                        Set(varItem, ThisItem),
+                                        Set(varShowConfirm, false),
+                                        Patch(_productionRecord, 
+                                        colTaskUpdates)),
+                                        
+                                    Concurrent(
+                                        Set(varEditFormVis, true),
+                                        Set(varItem, ThisItem),
+                                        Set(varShowConfirm, false)
+                                    )
+                        )
+                    Width: =40
+                    X: =txiSN.X + txiSN.Width + ((hdPicture.Width - Self.Width) * 0.5)
+                    Y: =40
+                    ZIndex: =19
+
+    Title_def As label:
+        AutoHeight: =true
+        FontWeight: =FontWeight.Bold
+        Size: =galFontSize + 7
+        Text: ="Defects Entry"
+        Width: =698
+        X: =220
+        Y: =15
+        ZIndex: =10
+
+    iconBiUpdate_def As image:
+        Height: =50
+        HoverFill: =Color.Black
+        Image: =refresh
+        OnSelect: =Set(varShowCommit, true)
+        RadiusBottomLeft: =25
+        RadiusBottomRight: =25
+        RadiusTopLeft: =25
+        RadiusTopRight: =25
+        Width: =50
+        X: =24
+        Y: =Parent.Height - Self.Height - 120
+        ZIndex: =11
+
+    contFilter_def As groupContainer.horizontalAutoLayoutContainer:
+        BorderColor: =RGBA(237, 237, 237, 1)
+        BorderThickness: =1
+        Fill: =RGBA(237, 237, 237, 1)
+        Height: =40
+        LayoutMode: =LayoutMode.Auto
+        Width: =lbFilterStartDate_def.Width + lbFilterEndDate_def.Width + pckStartDate.Width + pckEndDate.Width
+        X: =1154
+        Y: =28
+        ZIndex: =12
+
+        lbFilterStartDate_def As label:
+            Align: =Align.Center
+            Color: =RGBA(77, 77, 77, 1)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Size: =galFontSize + 1
+            Text: ="필터 시작 날짜"
+            Width: |
+                =180
+            X: =1494
+            Y: =90
+            ZIndex: =1
+
+        pckStartDate As datepicker:
+            BorderColor: =RGBA(237, 237, 237, 1)
+            BorderThickness: =1
+            Color: =RGBA(77, 77, 77, 1)
+            DefaultDate: =Today() - 30
+            Size: =galFontSize + 1
+            Width: =213
+            X: =1494
+            Y: =45
+            ZIndex: =2
+
+        lbFilterEndDate_def As label:
+            Align: =Align.Center
+            Color: =RGBA(77, 77, 77, 1)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Size: =galFontSize + 1
+            Text: ="필터 종료 날짜"
+            Width: |
+                =180
+            X: =233
+            Y: =90
+            ZIndex: =3
+
+        pckEndDate As datepicker:
+            BorderColor: =RGBA(237, 237, 237, 1)
+            BorderThickness: =1
+            Color: =RGBA(77, 77, 77, 1)
+            Size: =galFontSize + 1
+            Width: =213
+            X: =233
+            Y: =45
+            ZIndex: =4
+
+    contEditForm As groupContainer.manualLayoutContainer:
+        BorderThickness: =1
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =942
+        RadiusBottomLeft: =50
+        RadiusBottomRight: =50
+        RadiusTopLeft: =50
+        RadiusTopRight: =50
+        Visible: =varEditFormVis
+        Width: =1138
+        X: =40
+        Y: =40
+        ZIndex: =13
+
+        EditForm As form:
+            BorderColor: =RGBA(102, 102, 102, 1)
+            DataSource: =_productionRecord
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =845
+            Item: =varItem
+            NumberOfColumns: =2
+            OnFailure: =Notify("서버에 이미지를 저장하지 못하였습니다.", NotificationType.Error)
+            OnSuccess: =Notify("서버에 이미지 저장이 완료되었습니다.", NotificationType.Success)
+            SnapToColumns: =false
+            Width: =Parent.Width
+            Y: |
+                =100
+            ZIndex: =1
+
+            Picture_DataCard1 As typedDataCard.addLargePictureCard:
+                BorderStyle: =BorderStyle.Solid
+                DataField: ="Picture"
+                Default: =ThisItem.Picture
+                DisplayMode: =Parent.DisplayMode
+                DisplayName: =DataSourceInfo([@_productionRecord],DataSourceInfo.DisplayName,Picture)
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =389
+                Required: =false
+                Update: =Image3.Image
+                Width: =Parent.Width
+                X: =0
+                Y: =0
+                ZIndex: =2
+
+                DataCardKey15 As label:
+                    Height: =34
+                    Text: =Parent.DisplayName
+                    Width: =102
+                    Wrap: =false
+                    X: =30
+                    Y: =10 + (AddPicture1.Height / 2) - (Self.Height / 2)
+                    ZIndex: =1
+
+                Image3 As image:
+                    BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                    DisplayMode: =Parent.DisplayMode
+                    Height: =AddPicture1.Height
+                    Image: =If(IsBlank(AddPicture1.Media), Parent.Default, AddPicture1.Media)
+                    Tooltip: =Parent.DisplayName
+                    Width: =AddPicture1.Width
+                    X: =AddPicture1.X
+                    Y: =AddPicture1.Y
+                    ZIndex: =2
+
+                AddPicture1 As addMedia:
+                    Height: =468
+                    Size: =20
+                    Width: =Parent.Width - DataCardKey15.Width - 90
+                    X: =132
+                    Y: =10
+                    ZIndex: =3
+
+                ErrorMessage15 As label:
+                    AutoHeight: =true
+                    Height: =10
+                    Live: =Live.Assertive
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Text: =Parent.Error
+                    Visible: =Parent.DisplayMode=DisplayMode.Edit
+                    Width: =Parent.Width - 60
+                    Y: =Image3.Y + Image3.Height
+                    ZIndex: =4
+
+                StarVisible15 As label:
+                    Align: =Align.Center
+                    Height: =DataCardKey15.Height
+                    Text: ="*"
+                    Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                    Width: =30
+                    Wrap: =false
+                    Y: =DataCardKey15.Y
+                    ZIndex: =5
+
+            Line_DataCard1 As typedDataCard.textualEditCard:
+                BorderStyle: =BorderStyle.Solid
+                DataField: ="Line"
+                Default: =ThisItem.Line
+                DisplayMode: =DisplayMode.View
+                DisplayName: =DataSourceInfo([@_productionRecord],DataSourceInfo.DisplayName,Line)
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =50
+                MaxLength: =DataSourceInfo([@_productionRecord], DataSourceInfo.MaxLength, Line)
+                Required: =false
+                Update: =DataCardValue2.Text
+                Visible: =false
+                Width: =Parent.Width * 0.49
+                X: =1
+                Y: =0
+                ZIndex: =2
+
+                DataCardKey2 As label:
+                    AutoHeight: =true
+                    Height: =34
+                    Text: =Parent.DisplayName
+                    Width: =(Parent.Width - 60) * 0.4
+                    Wrap: =false
+                    X: =30
+                    Y: =10 + (DataCardValue2.Height / 2) - (Self.Height / 2)
+                    ZIndex: =1
+
+                DataCardValue2 As text:
+                    BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                    BorderThickness: =1
+                    Default: =Parent.Default
+                    DelayOutput: =true
+                    DisplayMode: =Parent.DisplayMode
+                    MaxLength: =Parent.MaxLength
+                    PaddingLeft: =5
+                    RadiusBottomLeft: =0
+                    RadiusBottomRight: =0
+                    RadiusTopLeft: =0
+                    RadiusTopRight: =0
+                    Tooltip: =Parent.DisplayName
+                    Width: =(Parent.Width - 60) * 0.6
+                    X: =DataCardKey2.X + DataCardKey2.Width
+                    Y: =10
+                    ZIndex: =2
+
+                ErrorMessage2 As label:
+                    AutoHeight: =true
+                    Height: =10
+                    Live: =Live.Assertive
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Text: =Parent.Error
+                    Visible: =Parent.DisplayMode=DisplayMode.Edit
+                    Width: =Parent.Width - 60
+                    X: =30
+                    Y: =DataCardValue2.Y + DataCardValue2.Height
+                    ZIndex: =3
+
+                StarVisible2 As label:
+                    Align: =Align.Center
+                    Height: =DataCardKey2.Height
+                    Text: ="*"
+                    Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                    Width: =30
+                    Wrap: =false
+                    Y: =DataCardKey2.Y
+                    ZIndex: =4
+
+            Type_DataCard1 As typedDataCard.textualEditCard:
+                BorderStyle: =BorderStyle.Solid
+                DataField: ="Type"
+                Default: =ThisItem.Type
+                DisplayMode: =DisplayMode.View
+                DisplayName: =DataSourceInfo([@_productionRecord],DataSourceInfo.DisplayName,Type)
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =50
+                MaxLength: =DataSourceInfo([@_productionRecord], DataSourceInfo.MaxLength, Type)
+                Required: =false
+                Update: =DataCardValue3.Text
+                Width: =Parent.Width * 0.49
+                X: =0
+                Y: =1
+                ZIndex: =2
+
+                DataCardKey3 As label:
+                    AutoHeight: =true
+                    Height: =34
+                    Text: =Parent.DisplayName
+                    Width: =(Parent.Width - 60) * 0.4
+                    Wrap: =false
+                    X: =30
+                    Y: =10 + (DataCardValue3.Height / 2) - (Self.Height / 2)
+                    ZIndex: =1
+
+                DataCardValue3 As text:
+                    BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                    Default: =Parent.Default
+                    DelayOutput: =true
+                    DisplayMode: =Parent.DisplayMode
+                    MaxLength: =Parent.MaxLength
+                    PaddingLeft: =5
+                    RadiusBottomLeft: =0
+                    RadiusBottomRight: =0
+                    RadiusTopLeft: =0
+                    RadiusTopRight: =0
+                    Tooltip: =Parent.DisplayName
+                    Width: =(Parent.Width - 60) * 0.6
+                    X: =DataCardKey3.X + DataCardKey3.Width
+                    Y: =10
+                    ZIndex: =2
+
+                ErrorMessage3 As label:
+                    AutoHeight: =true
+                    Height: =10
+                    Live: =Live.Assertive
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Text: =Parent.Error
+                    Visible: =Parent.DisplayMode=DisplayMode.Edit
+                    Width: =Parent.Width - 60
+                    X: =30
+                    Y: =DataCardValue3.Y + DataCardValue3.Height
+                    ZIndex: =3
+
+                StarVisible3 As label:
+                    Align: =Align.Center
+                    Height: =DataCardKey3.Height
+                    Text: ="*"
+                    Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                    Width: =30
+                    Wrap: =false
+                    Y: =DataCardKey3.Y
+                    ZIndex: =4
+
+            Customer_DataCard1 As typedDataCard.textualEditCard:
+                BorderStyle: =BorderStyle.Solid
+                DataField: ="Customer"
+                Default: =ThisItem.Customer
+                DisplayMode: =DisplayMode.View
+                DisplayName: =DataSourceInfo([@_productionRecord],DataSourceInfo.DisplayName,Customer)
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =50
+                MaxLength: =DataSourceInfo([@_productionRecord], DataSourceInfo.MaxLength, Customer)
+                Required: =false
+                Update: =DataCardValue4.Text
+                Width: =Parent.Width * 0.49
+                X: =1
+                Y: =1
+                ZIndex: =2
+
+                DataCardKey4 As label:
+                    AutoHeight: =true
+                    Height: =34
+                    Text: =Parent.DisplayName
+                    Width: =(Parent.Width - 60) * 0.4
+                    Wrap: =false
+                    X: =30
+                    Y: =10 + (DataCardValue4.Height / 2) - (Self.Height / 2)
+                    ZIndex: =1
+
+                DataCardValue4 As text:
+                    BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                    Default: =Parent.Default
+                    DelayOutput: =true
+                    DisplayMode: =Parent.DisplayMode
+                    MaxLength: =Parent.MaxLength
+                    PaddingLeft: =5
+                    RadiusBottomLeft: =0
+                    RadiusBottomRight: =0
+                    RadiusTopLeft: =0
+                    RadiusTopRight: =0
+                    Tooltip: =Parent.DisplayName
+                    Width: =(Parent.Width - 60) * 0.6
+                    X: =DataCardKey4.X + DataCardKey4.Width
+                    Y: =10
+                    ZIndex: =2
+
+                ErrorMessage4 As label:
+                    AutoHeight: =true
+                    Height: =10
+                    Live: =Live.Assertive
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Text: =Parent.Error
+                    Visible: =Parent.DisplayMode=DisplayMode.Edit
+                    Width: =Parent.Width - 60
+                    X: =30
+                    Y: =DataCardValue4.Y + DataCardValue4.Height
+                    ZIndex: =3
+
+                StarVisible4 As label:
+                    Align: =Align.Center
+                    Height: =DataCardKey4.Height
+                    Text: ="*"
+                    Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                    Width: =30
+                    Wrap: =false
+                    Y: =DataCardKey4.Y
+                    ZIndex: =4
+
+            ProjectName_DataCard1 As typedDataCard.textualEditCard:
+                BorderStyle: =BorderStyle.Solid
+                DataField: ="ProjectName"
+                Default: =ThisItem.ProjectName
+                DisplayMode: =DisplayMode.View
+                DisplayName: =DataSourceInfo([@_productionRecord],DataSourceInfo.DisplayName,ProjectName)
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =50
+                MaxLength: =DataSourceInfo([@_productionRecord], DataSourceInfo.MaxLength, ProjectName)
+                Required: =false
+                Update: =DataCardValue5.Text
+                Width: =Parent.Width * 0.49
+                X: =0
+                Y: =2
+                ZIndex: =2
+
+                DataCardKey5 As label:
+                    AutoHeight: =true
+                    Height: =34
+                    Text: =Parent.DisplayName
+                    Width: =(Parent.Width - 60) * 0.4
+                    Wrap: =false
+                    X: =30
+                    Y: =10 + (DataCardValue5.Height / 2) - (Self.Height / 2)
+                    ZIndex: =1
+
+                DataCardValue5 As text:
+                    BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                    Default: =Parent.Default
+                    DelayOutput: =true
+                    DisplayMode: =Parent.DisplayMode
+                    MaxLength: =Parent.MaxLength
+                    PaddingLeft: =5
+                    RadiusBottomLeft: =0
+                    RadiusBottomRight: =0
+                    RadiusTopLeft: =0
+                    RadiusTopRight: =0
+                    Tooltip: =Parent.DisplayName
+                    Width: =(Parent.Width - 60) * 0.6
+                    X: =DataCardKey5.X + DataCardKey5.Width
+                    Y: =10
+                    ZIndex: =2
+
+                ErrorMessage5 As label:
+                    AutoHeight: =true
+                    Height: =10
+                    Live: =Live.Assertive
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Text: =Parent.Error
+                    Visible: =Parent.DisplayMode=DisplayMode.Edit
+                    Width: =Parent.Width - 60
+                    X: =30
+                    Y: =DataCardValue5.Y + DataCardValue5.Height
+                    ZIndex: =3
+
+                StarVisible5 As label:
+                    Align: =Align.Center
+                    Height: =DataCardKey5.Height
+                    Text: ="*"
+                    Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                    Width: =30
+                    Wrap: =false
+                    Y: =DataCardKey5.Y
+                    ZIndex: =4
+
+            ProductNo_DataCard1 As typedDataCard.textualEditCard:
+                BorderStyle: =BorderStyle.Solid
+                DataField: ="ProductNo"
+                Default: =ThisItem.ProductNo
+                DisplayMode: =DisplayMode.View
+                DisplayName: =DataSourceInfo([@_productionRecord],DataSourceInfo.DisplayName,ProductNo)
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =50
+                MaxLength: =DataSourceInfo([@_productionRecord], DataSourceInfo.MaxLength, ProductNo)
+                Required: =false
+                Update: =DataCardValue6.Text
+                Width: =Parent.Width * 0.49
+                X: =1
+                Y: =2
+                ZIndex: =2
+
+                DataCardKey6 As label:
+                    AutoHeight: =true
+                    Height: =34
+                    Text: =Parent.DisplayName
+                    Width: =(Parent.Width - 60) * 0.4
+                    Wrap: =false
+                    X: =30
+                    Y: =10 + (DataCardValue6.Height / 2) - (Self.Height / 2)
+                    ZIndex: =1
+
+                DataCardValue6 As text:
+                    BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                    Default: =Parent.Default
+                    DelayOutput: =true
+                    DisplayMode: =Parent.DisplayMode
+                    MaxLength: =Parent.MaxLength
+                    PaddingLeft: =5
+                    RadiusBottomLeft: =0
+                    RadiusBottomRight: =0
+                    RadiusTopLeft: =0
+                    RadiusTopRight: =0
+                    Tooltip: =Parent.DisplayName
+                    Width: =(Parent.Width - 60) * 0.6
+                    X: =DataCardKey6.X + DataCardKey6.Width
+                    Y: =10
+                    ZIndex: =2
+
+                ErrorMessage6 As label:
+                    AutoHeight: =true
+                    Height: =10
+                    Live: =Live.Assertive
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Text: =Parent.Error
+                    Visible: =Parent.DisplayMode=DisplayMode.Edit
+                    Width: =Parent.Width - 60
+                    X: =30
+                    Y: =DataCardValue6.Y + DataCardValue6.Height
+                    ZIndex: =3
+
+                StarVisible6 As label:
+                    Align: =Align.Center
+                    Height: =DataCardKey6.Height
+                    Text: ="*"
+                    Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                    Width: =30
+                    Wrap: =false
+                    Y: =DataCardKey6.Y
+                    ZIndex: =4
+
+            Spec_DataCard1 As typedDataCard.textualEditCard:
+                BorderStyle: =BorderStyle.Solid
+                DataField: ="Spec"
+                Default: =ThisItem.Spec
+                DisplayMode: =DisplayMode.View
+                DisplayName: =DataSourceInfo([@_productionRecord],DataSourceInfo.DisplayName,Spec)
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =50
+                MaxLength: =DataSourceInfo([@_productionRecord], DataSourceInfo.MaxLength, Spec)
+                Required: =false
+                Update: =DataCardValue7.Text
+                Width: =Parent.Width * 0.49
+                X: =0
+                Y: =3
+                ZIndex: =2
+
+                DataCardKey7 As label:
+                    AutoHeight: =true
+                    Height: =34
+                    Text: =Parent.DisplayName
+                    Width: =(Parent.Width - 60) * 0.4
+                    Wrap: =false
+                    X: =30
+                    Y: =10 + (DataCardValue7.Height / 2) - (Self.Height / 2)
+                    ZIndex: =1
+
+                DataCardValue7 As text:
+                    BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                    Default: =Parent.Default
+                    DelayOutput: =true
+                    DisplayMode: =Parent.DisplayMode
+                    MaxLength: =Parent.MaxLength
+                    PaddingLeft: =5
+                    RadiusBottomLeft: =0
+                    RadiusBottomRight: =0
+                    RadiusTopLeft: =0
+                    RadiusTopRight: =0
+                    Tooltip: =Parent.DisplayName
+                    Width: =(Parent.Width - 60) * 0.6
+                    X: =DataCardKey7.X + DataCardKey7.Width
+                    Y: =10
+                    ZIndex: =2
+
+                ErrorMessage7 As label:
+                    AutoHeight: =true
+                    Height: =10
+                    Live: =Live.Assertive
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Text: =Parent.Error
+                    Visible: =Parent.DisplayMode=DisplayMode.Edit
+                    Width: =Parent.Width - 60
+                    X: =30
+                    Y: =DataCardValue7.Y + DataCardValue7.Height
+                    ZIndex: =3
+
+                StarVisible7 As label:
+                    Align: =Align.Center
+                    Height: =DataCardKey7.Height
+                    Text: ="*"
+                    Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                    Width: =30
+                    Wrap: =false
+                    Y: =DataCardKey7.Y
+                    ZIndex: =4
+
+            Remark_DataCard1 As typedDataCard.textualEditCard:
+                BorderStyle: =BorderStyle.Solid
+                DataField: ="Remark"
+                Default: =ThisItem.Remark
+                DisplayMode: =DisplayMode.View
+                DisplayName: =DataSourceInfo([@_productionRecord],DataSourceInfo.DisplayName,Remark)
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =50
+                MaxLength: =DataSourceInfo([@_productionRecord], DataSourceInfo.MaxLength, Remark)
+                Required: =false
+                Update: =DataCardValue8.Text
+                Width: =Parent.Width * 0.49
+                X: =1
+                Y: =3
+                ZIndex: =2
+
+                DataCardKey8 As label:
+                    AutoHeight: =true
+                    Height: =34
+                    Text: =Parent.DisplayName
+                    Width: =(Parent.Width - 60) * 0.4
+                    Wrap: =false
+                    X: =30
+                    Y: =10 + (DataCardValue8.Height / 2) - (Self.Height / 2)
+                    ZIndex: =1
+
+                DataCardValue8 As text:
+                    BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                    Default: =Parent.Default
+                    DelayOutput: =true
+                    DisplayMode: =Parent.DisplayMode
+                    MaxLength: =Parent.MaxLength
+                    PaddingLeft: =5
+                    RadiusBottomLeft: =0
+                    RadiusBottomRight: =0
+                    RadiusTopLeft: =0
+                    RadiusTopRight: =0
+                    Tooltip: =Parent.DisplayName
+                    Width: =(Parent.Width - 60) * 0.6
+                    X: =DataCardKey8.X + DataCardKey8.Width
+                    Y: =10
+                    ZIndex: =2
+
+                ErrorMessage8 As label:
+                    AutoHeight: =true
+                    Height: =10
+                    Live: =Live.Assertive
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Text: =Parent.Error
+                    Visible: =Parent.DisplayMode=DisplayMode.Edit
+                    Width: =Parent.Width - 60
+                    X: =30
+                    Y: =DataCardValue8.Y + DataCardValue8.Height
+                    ZIndex: =3
+
+                StarVisible8 As label:
+                    Align: =Align.Center
+                    Height: =DataCardKey8.Height
+                    Text: ="*"
+                    Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                    Width: =30
+                    Wrap: =false
+                    Y: =DataCardKey8.Y
+                    ZIndex: =4
+
+            Date_DataCard1 As typedDataCard.dateEditCard:
+                BorderStyle: =BorderStyle.Solid
+                DataField: ="Date"
+                Default: =ThisItem.Date
+                DisplayMode: =DisplayMode.View
+                DisplayName: =DataSourceInfo([@_productionRecord],DataSourceInfo.DisplayName,Date)
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =50
+                Required: =false
+                Update: =DataCardValue9.SelectedDate
+                Width: =Parent.Width * 0.49
+                X: =0
+                Y: =4
+                ZIndex: =2
+
+                DataCardKey9 As label:
+                    AutoHeight: =true
+                    Height: =34
+                    Text: =Parent.DisplayName
+                    Width: =(Parent.Width - 60) * 0.4
+                    Wrap: =false
+                    X: =30
+                    Y: =10 + (DataCardValue9.Height / 2) - (Self.Height / 2)
+                    ZIndex: =1
+
+                DataCardValue9 As datepicker:
+                    BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                    DefaultDate: =Parent.Default
+                    DisplayMode: =Parent.DisplayMode
+                    EndYear: =Year(Today())+100
+                    IsEditable: =true
+                    PaddingBottom: =0
+                    PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                    StartYear: =1899
+                    Tooltip: =Parent.DisplayName
+                    Width: =(Parent.Width - 60) * 0.6
+                    X: =DataCardKey9.X + DataCardKey9.Width
+                    Y: =10
+                    ZIndex: =2
+
+                ErrorMessage9 As label:
+                    AutoHeight: =true
+                    Height: =10
+                    Live: =Live.Assertive
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Text: =Parent.Error
+                    Visible: =Parent.DisplayMode=DisplayMode.Edit
+                    Width: =Parent.Width - 60
+                    X: =30
+                    Y: =DataCardValue9.Y + DataCardValue9.Height
+                    ZIndex: =3
+
+                StarVisible9 As label:
+                    Align: =Align.Center
+                    Height: =DataCardKey9.Height
+                    Text: ="*"
+                    Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                    Width: =30
+                    Wrap: =false
+                    Y: =DataCardKey9.Y
+                    ZIndex: =4
+
+            Shift_DataCard1 As typedDataCard.textualEditCard:
+                BorderStyle: =BorderStyle.Solid
+                DataField: ="Shift"
+                Default: =ThisItem.Shift
+                DisplayMode: =DisplayMode.View
+                DisplayName: =DataSourceInfo([@_productionRecord],DataSourceInfo.DisplayName,Shift)
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =50
+                MaxLength: =DataSourceInfo([@_productionRecord], DataSourceInfo.MaxLength, Shift)
+                Required: =false
+                Update: =DataCardValue10.Text
+                Width: =Parent.Width * 0.49
+                X: =1
+                Y: =4
+                ZIndex: =2
+
+                DataCardKey10 As label:
+                    AutoHeight: =true
+                    Height: =34
+                    Text: =Parent.DisplayName
+                    Width: =(Parent.Width - 60) * 0.4
+                    Wrap: =false
+                    X: =30
+                    Y: =10 + (DataCardValue10.Height / 2) - (Self.Height / 2)
+                    ZIndex: =1
+
+                DataCardValue10 As text:
+                    BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                    Default: =Parent.Default
+                    DelayOutput: =true
+                    DisplayMode: =Parent.DisplayMode
+                    MaxLength: =Parent.MaxLength
+                    PaddingLeft: =5
+                    RadiusBottomLeft: =0
+                    RadiusBottomRight: =0
+                    RadiusTopLeft: =0
+                    RadiusTopRight: =0
+                    Tooltip: =Parent.DisplayName
+                    Width: =(Parent.Width - 60) * 0.6
+                    X: =DataCardKey10.X + DataCardKey10.Width
+                    Y: =10
+                    ZIndex: =2
+
+                ErrorMessage10 As label:
+                    AutoHeight: =true
+                    Height: =10
+                    Live: =Live.Assertive
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Text: =Parent.Error
+                    Visible: =Parent.DisplayMode=DisplayMode.Edit
+                    Width: =Parent.Width - 60
+                    X: =30
+                    Y: =DataCardValue10.Y + DataCardValue10.Height
+                    ZIndex: =3
+
+                StarVisible10 As label:
+                    Align: =Align.Center
+                    Height: =DataCardKey10.Height
+                    Text: ="*"
+                    Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                    Width: =30
+                    Wrap: =false
+                    Y: =DataCardKey10.Y
+                    ZIndex: =4
+
+            Process_DataCard1 As typedDataCard.textualEditCard:
+                BorderStyle: =BorderStyle.Solid
+                DataField: ="Process"
+                Default: =ThisItem.Process
+                DisplayMode: =DisplayMode.View
+                DisplayName: =DataSourceInfo([@_productionRecord],DataSourceInfo.DisplayName,Process)
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =50
+                MaxLength: =DataSourceInfo([@_productionRecord], DataSourceInfo.MaxLength, Process)
+                Required: =false
+                Update: =DataCardValue11.Text
+                Width: =Parent.Width * 0.49
+                X: =0
+                Y: =5
+                ZIndex: =2
+
+                DataCardKey11 As label:
+                    AutoHeight: =true
+                    Height: =34
+                    Text: =Parent.DisplayName
+                    Width: =(Parent.Width - 60) * 0.4
+                    Wrap: =false
+                    X: =30
+                    Y: =10 + (DataCardValue11.Height / 2) - (Self.Height / 2)
+                    ZIndex: =1
+
+                DataCardValue11 As text:
+                    BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                    Default: =Parent.Default
+                    DelayOutput: =true
+                    DisplayMode: =Parent.DisplayMode
+                    MaxLength: =Parent.MaxLength
+                    PaddingLeft: =5
+                    RadiusBottomLeft: =0
+                    RadiusBottomRight: =0
+                    RadiusTopLeft: =0
+                    RadiusTopRight: =0
+                    Tooltip: =Parent.DisplayName
+                    Width: =(Parent.Width - 60) * 0.6
+                    X: =DataCardKey11.X + DataCardKey11.Width
+                    Y: =10
+                    ZIndex: =2
+
+                ErrorMessage11 As label:
+                    AutoHeight: =true
+                    Height: =10
+                    Live: =Live.Assertive
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Text: =Parent.Error
+                    Visible: =Parent.DisplayMode=DisplayMode.Edit
+                    Width: =Parent.Width - 60
+                    X: =30
+                    Y: =DataCardValue11.Y + DataCardValue11.Height
+                    ZIndex: =3
+
+                StarVisible11 As label:
+                    Align: =Align.Center
+                    Height: =DataCardKey11.Height
+                    Text: ="*"
+                    Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                    Width: =30
+                    Wrap: =false
+                    Y: =DataCardKey11.Y
+                    ZIndex: =4
+
+            PO_DataCard1 As typedDataCard.textualEditCard:
+                BorderStyle: =BorderStyle.Solid
+                DataField: ="PO"
+                Default: =ThisItem.PO
+                DisplayMode: =DisplayMode.View
+                DisplayName: =DataSourceInfo([@_productionRecord],DataSourceInfo.DisplayName,PO)
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =50
+                MaxLength: =DataSourceInfo([@_productionRecord], DataSourceInfo.MaxLength, PO)
+                Required: =false
+                Update: =DataCardValue12.Text
+                Width: =Parent.Width * 0.49
+                X: =1
+                Y: =5
+                ZIndex: =2
+
+                DataCardKey12 As label:
+                    AutoHeight: =true
+                    Height: =34
+                    Text: =Parent.DisplayName
+                    Width: =(Parent.Width - 60) * 0.4
+                    Wrap: =false
+                    X: =30
+                    Y: =10 + (DataCardValue12.Height / 2) - (Self.Height / 2)
+                    ZIndex: =1
+
+                DataCardValue12 As text:
+                    BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                    Default: =Parent.Default
+                    DelayOutput: =true
+                    DisplayMode: =Parent.DisplayMode
+                    MaxLength: =Parent.MaxLength
+                    PaddingLeft: =5
+                    RadiusBottomLeft: =0
+                    RadiusBottomRight: =0
+                    RadiusTopLeft: =0
+                    RadiusTopRight: =0
+                    Tooltip: =Parent.DisplayName
+                    Width: =(Parent.Width - 60) * 0.6
+                    X: =DataCardKey12.X + DataCardKey12.Width
+                    Y: =10
+                    ZIndex: =2
+
+                ErrorMessage12 As label:
+                    AutoHeight: =true
+                    Height: =10
+                    Live: =Live.Assertive
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Text: =Parent.Error
+                    Visible: =Parent.DisplayMode=DisplayMode.Edit
+                    Width: =Parent.Width - 60
+                    X: =30
+                    Y: =DataCardValue12.Y + DataCardValue12.Height
+                    ZIndex: =3
+
+                StarVisible12 As label:
+                    Align: =Align.Center
+                    Height: =DataCardKey12.Height
+                    Text: ="*"
+                    Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                    Width: =30
+                    Wrap: =false
+                    Y: =DataCardKey12.Y
+                    ZIndex: =4
+
+            PartNo_DataCard1 As typedDataCard.textualEditCard:
+                BorderStyle: =BorderStyle.Solid
+                DataField: ="PartNo"
+                Default: =ThisItem.PartNo
+                DisplayMode: =DisplayMode.View
+                DisplayName: =DataSourceInfo([@_productionRecord],DataSourceInfo.DisplayName,PartNo)
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =50
+                MaxLength: =DataSourceInfo([@_productionRecord], DataSourceInfo.MaxLength, PartNo)
+                Required: =false
+                Update: =DataCardValue13.Text
+                Width: =Parent.Width * 0.49
+                X: =0
+                Y: =6
+                ZIndex: =2
+
+                DataCardKey13 As label:
+                    AutoHeight: =true
+                    Height: =34
+                    Text: =Parent.DisplayName
+                    Width: =(Parent.Width - 60) * 0.4
+                    Wrap: =false
+                    X: =30
+                    Y: =10 + (DataCardValue13.Height / 2) - (Self.Height / 2)
+                    ZIndex: =1
+
+                DataCardValue13 As text:
+                    BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                    Default: =Parent.Default
+                    DelayOutput: =true
+                    DisplayMode: =Parent.DisplayMode
+                    MaxLength: =Parent.MaxLength
+                    PaddingLeft: =5
+                    RadiusBottomLeft: =0
+                    RadiusBottomRight: =0
+                    RadiusTopLeft: =0
+                    RadiusTopRight: =0
+                    Tooltip: =Parent.DisplayName
+                    Width: =(Parent.Width - 60) * 0.6
+                    X: =DataCardKey13.X + DataCardKey13.Width
+                    Y: =10
+                    ZIndex: =2
+
+                ErrorMessage13 As label:
+                    AutoHeight: =true
+                    Height: =10
+                    Live: =Live.Assertive
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Text: =Parent.Error
+                    Visible: =Parent.DisplayMode=DisplayMode.Edit
+                    Width: =Parent.Width - 60
+                    X: =30
+                    Y: =DataCardValue13.Y + DataCardValue13.Height
+                    ZIndex: =3
+
+                StarVisible13 As label:
+                    Align: =Align.Center
+                    Height: =DataCardKey13.Height
+                    Text: ="*"
+                    Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                    Width: =30
+                    Wrap: =false
+                    Y: =DataCardKey13.Y
+                    ZIndex: =4
+
+            PartName_DataCard1 As typedDataCard.textualEditCard:
+                BorderStyle: =BorderStyle.Solid
+                DataField: ="PartName"
+                Default: =ThisItem.PartName
+                DisplayMode: =DisplayMode.View
+                DisplayName: =DataSourceInfo([@_productionRecord],DataSourceInfo.DisplayName,PartName)
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =64
+                MaxLength: =DataSourceInfo([@_productionRecord], DataSourceInfo.MaxLength, PartName)
+                Required: =false
+                Update: =DataCardValue14.Text
+                Width: =Parent.Width * 0.49
+                X: =1
+                Y: =6
+                ZIndex: =2
+
+                DataCardKey14 As label:
+                    AutoHeight: =true
+                    Height: =34
+                    Text: =Parent.DisplayName
+                    Width: =(Parent.Width - 60) * 0.4
+                    Wrap: =false
+                    X: =30
+                    Y: =10 + (DataCardValue14.Height / 2) - (Self.Height / 2)
+                    ZIndex: =1
+
+                DataCardValue14 As text:
+                    BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                    Default: =Parent.Default
+                    DelayOutput: =true
+                    DisplayMode: =Parent.DisplayMode
+                    MaxLength: =Parent.MaxLength
+                    PaddingLeft: =5
+                    RadiusBottomLeft: =0
+                    RadiusBottomRight: =0
+                    RadiusTopLeft: =0
+                    RadiusTopRight: =0
+                    Tooltip: =Parent.DisplayName
+                    Width: =(Parent.Width - 60) * 0.6
+                    X: =DataCardKey14.X + DataCardKey14.Width
+                    Y: =10
+                    ZIndex: =2
+
+                ErrorMessage14 As label:
+                    AutoHeight: =true
+                    Height: =10
+                    Live: =Live.Assertive
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Text: =Parent.Error
+                    Visible: =Parent.DisplayMode=DisplayMode.Edit
+                    Width: =Parent.Width - 60
+                    X: =30
+                    Y: =DataCardValue14.Y + DataCardValue14.Height
+                    ZIndex: =3
+
+                StarVisible14 As label:
+                    Align: =Align.Center
+                    Height: =DataCardKey14.Height
+                    Text: ="*"
+                    Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                    Width: =30
+                    Wrap: =false
+                    Y: =DataCardKey14.Y
+                    ZIndex: =4
+
+        Icon12 As icon.Cancel:
+            Color: =RGBA(0, 0, 0, 1)
+            Height: =40
+            Icon: =Icon.CancelBadge
+            OnSelect: |-
+                =If(
+                    EditForm.Unsaved,
+                    Set(varShowConfirm, true), Set(varEditFormVis, false)
+                )
+            Width: =40
+            X: =1071
+            Y: =22
+            ZIndex: =2
+
+        Label10 As label:
+            FontWeight: =FontWeight.Semibold
+            Height: =85
+            Size: =30
+            Text: ="불량 이미지 등록"
+            Width: =436
+            X: =28
+            Y: =22
+            ZIndex: =5
+
+        contConfirm As groupContainer.manualLayoutContainer:
+            BorderColor: =RGBA(102, 102, 102, 1)
+            BorderThickness: =1
+            DropShadow: =DropShadow.None
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =153
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Visible: =varShowConfirm
+            Width: =910
+            X: =114
+            Y: =22
+            ZIndex: =6
+
+            Label4 As label:
+                FontWeight: =FontWeight.Semibold
+                Height: =71
+                Size: =20
+                Text: ="변경사항이 저장되지 않았습니다. 정말 창을 닫으시겠습니까?"
+                Width: =412
+                X: =iconAlert.X + iconAlert.Width + 30
+                Y: =(Parent.Height - Self.Height) * 0.5
+                ZIndex: =1
+
+            iconAlert As icon.Warning:
+                Color: =RGBA(203, 102, 102, 1)
+                Icon: =Icon.Warning
+                X: =31
+                Y: |
+                    =(Parent.Height - Self.Height) * 0.5
+                ZIndex: =2
+
+            Icon9 As icon.CancelBadge:
+                Color: =RGBA(255, 0, 0, 1)
+                Icon: =Icon.CancelBadge
+                OnSelect: =Set(varShowConfirm, false)
+                X: =689
+                Y: =25
+                ZIndex: =4
+
+            Icon10 As icon.CheckBadge:
+                Color: =RGBA(54, 176, 75, 1)
+                Icon: =Icon.CheckBadge
+                OnSelect: =Set(varEditFormVis, false); Set(varShowConfirm, false)
+                X: =795
+                Y: =25
+                ZIndex: =5
+
+            Label5 As label:
+                Height: =29
+                Text: ="아니오"
+                Width: =62
+                X: =691
+                Y: =98
+                ZIndex: =6
+
+            Label5_1 As label:
+                Height: =29
+                Text: ="예"
+                Width: =48
+                X: =811
+                Y: =98
+                ZIndex: =7
+
+            Icon11 As icon.EmojiHappy:
+                Color: =RGBA(39, 113, 194, 1)
+                Icon: =Icon.EmojiHappy
+                OnSelect: |-
+                    =SubmitForm(EditForm);
+                    ResetForm(EditForm);
+                    Set(varEditFormVis, false)
+                X: =583
+                Y: =25
+                ZIndex: =8
+
+            Label5_2 As label:
+                Align: =Align.Center
+                Height: =44
+                Text: ="저장 후   닫기"
+                Width: =93
+                X: =568
+                Y: =98
+                ZIndex: =9
+
+        grpSave As group:
+            Height: =5
+            Width: =5
+            X: =40
+            Y: =40
+            ZIndex: =6
+
+            Button1 As button:
+                Height: =60
+                OnSelect: |-
+                    =SubmitForm(EditForm);
+                    ResetForm(EditForm)
+                RadiusBottomLeft: =20
+                RadiusBottomRight: =20
+                RadiusTopLeft: =20
+                RadiusTopRight: =20
+                Size: =20
+                Text: ="      저장"
+                Visible: =If(EditForm.Unsaved, true, false)
+                Width: =150
+                X: =494
+                Y: =34
+                ZIndex: =3
+
+            Icon3 As icon.Save:
+                Color: =RGBA(255, 255, 255, 1)
+                Height: =40
+                Icon: =Icon.Save
+                OnSelect: |-
+                    =SubmitForm(EditForm);
+                    ResetForm(EditForm)
+                Visible: =If(EditForm.Unsaved, true, false)
+                Width: =40
+                X: =514
+                Y: =44
+                ZIndex: =4
+
+    contCommit_def As groupContainer.manualLayoutContainer:
+        BorderThickness: =1
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =438
+        Visible: =varShowCommit
+        Width: =559
+        X: =22
+        Y: =610
+        ZIndex: =14
+
+        commitForm_def As form:
+            DataSource: =_pdR_commit_history
+            DefaultMode: =FormMode.New
+            Height: =307
+            NumberOfColumns: =1
+            Width: =559
+            Y: =72
+            ZIndex: =2
+
+            Prod_check_DataCard1_2 As typedDataCard.toggleEditCard:
+                BorderStyle: =BorderStyle.Solid
+                DataField: ="Prod_check"
+                Default: =ThisItem.Prod_check
+                DisplayMode: =Parent.DisplayMode
+                DisplayName: =DataSourceInfo([@_pdR_commit_history],DataSourceInfo.DisplayName,Prod_check)
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =50
+                Required: =false
+                Update: =prod_check_2.Value
+                Width: =559
+                X: =0
+                Y: =0
+                ZIndex: =2
+
+                DataCardKey16_2 As label:
+                    Color: =RGBA(0, 0, 0, 1)
+                    Height: =33
+                    Size: =galFontSize
+                    Text: ="생산이력을 정확하게 입력했습니까?"
+                    Width: =332
+                    Wrap: =false
+                    X: =30
+                    Y: =10 + (prod_check_2.Height / 2) - (Self.Height / 2)
+                    ZIndex: =1
+
+                prod_check_2 As toggleSwitch:
+                    BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                    Default: =Parent.Default
+                    DisplayMode: =Parent.DisplayMode
+                    FalseText: ="아니오"
+                    Size: =galFontSize
+                    TextPosition: =TextPosition.Left
+                    Tooltip: =Parent.DisplayName
+                    TrueText: ="예"
+                    Width: =120
+                    X: =Parent.Width  - Self.Width - 30
+                    Y: =12
+                    ZIndex: =2
+
+                ErrorMessage16_2 As label:
+                    AutoHeight: =true
+                    Height: =10
+                    Live: =Live.Assertive
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Text: =Parent.Error
+                    Visible: =Parent.DisplayMode=DisplayMode.Edit
+                    Width: =Parent.Width - 60
+                    X: =30
+                    Y: =prod_check_2.Y + prod_check_2.Height
+                    ZIndex: =3
+
+                StarVisible16_2 As label:
+                    Align: =Align.Center
+                    Height: =DataCardKey16_2.Height
+                    Text: ="*"
+                    Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                    Width: =30
+                    Wrap: =false
+                    Y: =DataCardKey16_2.Y
+                    ZIndex: =4
+
+            Def_check_DataCard1_2 As typedDataCard.toggleEditCard:
+                BorderStyle: =BorderStyle.Solid
+                DataField: ="Def_check"
+                Default: =ThisItem.Def_check
+                DisplayMode: =Parent.DisplayMode
+                DisplayName: =DataSourceInfo([@_pdR_commit_history],DataSourceInfo.DisplayName,Def_check)
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =50
+                Required: =false
+                Update: =def_check_2.Value
+                Width: =559
+                X: =0
+                Y: =1
+                ZIndex: =2
+
+                DataCardKey17_2 As label:
+                    Color: =RGBA(0, 0, 0, 1)
+                    Height: =33
+                    Size: =galFontSize
+                    Text: ="불량이력을 정확하게 입력했습니까?"
+                    Width: =326
+                    Wrap: =false
+                    X: =30
+                    Y: =10 + (def_check_2.Height / 2) - (Self.Height / 2)
+                    ZIndex: =1
+
+                def_check_2 As toggleSwitch:
+                    BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                    Default: =Parent.Default
+                    DisplayMode: =Parent.DisplayMode
+                    FalseText: ="아니오"
+                    Size: =galFontSize
+                    TextPosition: =TextPosition.Left
+                    Tooltip: =Parent.DisplayName
+                    TrueText: ="예"
+                    Width: =120
+                    X: =Parent.Width  - Self.Width - 30
+                    Y: =12
+                    ZIndex: =2
+
+                ErrorMessage17_2 As label:
+                    AutoHeight: =true
+                    Height: =10
+                    Live: =Live.Assertive
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Text: =Parent.Error
+                    Visible: =Parent.DisplayMode=DisplayMode.Edit
+                    Width: =Parent.Width - 60
+                    X: =30
+                    Y: =def_check_2.Y + def_check_2.Height
+                    ZIndex: =3
+
+                StarVisible17_2 As label:
+                    Align: =Align.Center
+                    Height: =DataCardKey17_2.Height
+                    Text: ="*"
+                    Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                    Width: =30
+                    Wrap: =false
+                    Y: =DataCardKey17_2.Y
+                    ZIndex: =4
+
+            Att_check_DataCard1_2 As typedDataCard.toggleEditCard:
+                BorderColor: =RGBA(0, 0, 0, 1)
+                BorderStyle: =BorderStyle.Solid
+                DataField: ="Att_check"
+                Default: =ThisItem.Att_check
+                DisplayMode: =Parent.DisplayMode
+                DisplayName: =DataSourceInfo([@_pdR_commit_history],DataSourceInfo.DisplayName,Att_check)
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =50
+                Required: =false
+                Update: =att_check_2.Value
+                Width: =559
+                X: =0
+                Y: =2
+                ZIndex: =2
+
+                DataCardKey18_2 As label:
+                    Color: =RGBA(0, 0, 0, 1)
+                    Height: =33
+                    Size: =galFontSize
+                    Text: ="근태현황을 정확하게 입력했습니까?"
+                    Width: =301
+                    Wrap: =false
+                    X: =30
+                    Y: =10 + (att_check_2.Height / 2) - (Self.Height / 2)
+                    ZIndex: =1
+
+                att_check_2 As toggleSwitch:
+                    BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                    Default: =Parent.Default
+                    DisplayMode: =Parent.DisplayMode
+                    FalseText: ="아니오"
+                    Size: =galFontSize
+                    TextPosition: =TextPosition.Left
+                    Tooltip: =Parent.DisplayName
+                    TrueText: ="예"
+                    Width: =120
+                    X: =Parent.Width  - Self.Width - 30
+                    Y: =12
+                    ZIndex: =2
+
+                ErrorMessage18_2 As label:
+                    AutoHeight: =true
+                    Height: =10
+                    Live: =Live.Assertive
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Text: =Parent.Error
+                    Visible: =Parent.DisplayMode=DisplayMode.Edit
+                    Width: =Parent.Width - 60
+                    X: =30
+                    Y: =att_check_2.Y + att_check_2.Height
+                    ZIndex: =3
+
+                StarVisible18_2 As label:
+                    Align: =Align.Center
+                    Height: =DataCardKey18_2.Height
+                    Text: ="*"
+                    Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                    Width: =30
+                    Wrap: =false
+                    Y: =DataCardKey18_2.Y
+                    ZIndex: =4
+
+            Comment_DataCard1_2 As typedDataCard.textualEditCard:
+                BorderStyle: =BorderStyle.Solid
+                DataField: ="Comment"
+                Default: =ThisItem.Comment
+                DisplayMode: =Parent.DisplayMode
+                DisplayName: =DataSourceInfo([@_pdR_commit_history],DataSourceInfo.DisplayName,Comment)
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =144
+                MaxLength: =DataSourceInfo([@_pdR_commit_history], DataSourceInfo.MaxLength, Comment)
+                Required: =false
+                Update: =DataCardValue18_2.Text
+                Width: =559
+                X: =0
+                Y: =3
+                ZIndex: =2
+
+                DataCardKey19_2 As label:
+                    AutoHeight: =true
+                    Color: =RGBA(0, 0, 0, 1)
+                    Height: =34
+                    Text: =Parent.DisplayName
+                    Width: =(Parent.Width - 60) * 0.4
+                    Wrap: =false
+                    X: =30
+                    Y: =10 + (DataCardValue18_2.Height / 2) - (Self.Height / 2)
+                    ZIndex: =1
+
+                DataCardValue18_2 As text:
+                    BorderColor: =RGBA(102, 102, 102, 1)
+                    BorderThickness: =1
+                    Default: =Parent.Default
+                    DelayOutput: =true
+                    DisplayMode: =Parent.DisplayMode
+                    Height: =121
+                    MaxLength: =Parent.MaxLength
+                    PaddingLeft: =5
+                    RadiusBottomLeft: =0
+                    RadiusBottomRight: =0
+                    RadiusTopLeft: =0
+                    RadiusTopRight: =0
+                    Size: =galFontSize
+                    Tooltip: =Parent.DisplayName
+                    Width: =365
+                    X: =164
+                    Y: =10
+                    ZIndex: =2
+
+                ErrorMessage19_2 As label:
+                    AutoHeight: =true
+                    Height: =10
+                    Live: =Live.Assertive
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Text: =Parent.Error
+                    Visible: =Parent.DisplayMode=DisplayMode.Edit
+                    Width: =Parent.Width - 60
+                    X: =30
+                    Y: =DataCardValue18_2.Y + DataCardValue18_2.Height
+                    ZIndex: =3
+
+                StarVisible19_2 As label:
+                    Align: =Align.Center
+                    Height: =DataCardKey19_2.Height
+                    Text: ="*"
+                    Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                    Width: =30
+                    Wrap: =false
+                    Y: =DataCardKey19_2.Y
+                    ZIndex: =4
+
+        lbCommit_def As label:
+            FontWeight: =FontWeight.Semibold
+            Height: =38
+            Size: =galFontSize + 7
+            Text: ="Commit Sign"
+            Width: =258
+            X: =20
+            Y: =16
+            ZIndex: =3
+
+        btnCommit_def As button:
+            Height: =38
+            OnSelect: |
+                =If(
+                    varButtonDisabled, 
+                    Notify("버튼은 30초마다 한 번만 누를 수 있습니다.", NotificationType.Warning),
+                    If(
+                        And(
+                            def_check_2.Value = true,
+                            prod_check_2.Value = true,
+                            att_check_2.Value = true
+                        ),
+                        IfError(
+                            SubmitForm(commitForm_def),
+                            Notify("서버에 저장하는 중 오류가 발생했습니다.", NotificationType.Error),
+                            Notify("서버 저장 및 Power BI 업데이트가 진행됩니다.", NotificationType.Success);
+                            Set(varShowCommit, false);
+                            Set(varButtonDisabled, true);
+                            Reset(ButtonTimer_prod);
+                            ResetForm(commitForm_def)            
+                        ),
+                        Notify("체크박스를 확인해주세요.", NotificationType.Warning)
+                    )
+                )
+            Size: =galFontSize
+            Text: ="Commit"
+            Width: =111
+            X: =413
+            Y: =379
+            ZIndex: =4
+
+        IconExitCommit_def As icon.Cancel:
+            Color: =RGBA(0, 0, 0, 1)
+            Height: =31
+            Icon: =Icon.CancelBadge
+            OnSelect: =Set(varShowCommit, false)
+            Width: =27
+            X: =524
+            Y: =11
+            ZIndex: =5
+
+        btnCommitwithoutPatch As button:
+            Fill: =RGBA(203, 102, 102, 1)
+            OnSelect: |-
+                =If(
+                    varButtonDisabled, 
+                    Notify("업데이트는 10분에 한 번만 할 수 있습니다.", NotificationType.Warning),
+                IfError(
+                Patch(
+                        _pdR_unofficial_commit_history, 
+                        Defaults(_pdR_unofficial_commit_history), 
+                        { 
+                            Updated: "True"
+                        }
+                ), Notify("비정규 Commit이 실패하였습니다.", NotificationType.Error),
+                Notify("Power BI 비정규 업데이트가 진행됩니다.", NotificationType.Success); 
+                Set(varShowCommit, false);
+                Set(varButtonDisabled, true);
+                Reset(ButtonTimer_prod);
+                ))
+            Size: =galFontSize
+            Text: ="Commit w/o msg"
+            Width: =184
+            X: =20
+            Y: =377
+            ZIndex: =6
+
+    contWorkOrder As groupContainer.manualLayoutContainer:
+        BorderColor: =RGBA(128, 128, 128, 1)
+        BorderThickness: =1
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =954
+        RadiusBottomLeft: =20
+        RadiusBottomRight: =20
+        RadiusTopLeft: =20
+        RadiusTopRight: =20
+        Visible: =varWOvis
+        Width: |
+            =1150
+        X: =812
+        Y: =101
+        ZIndex: =15
+
+        "galProdHistory As gallery.'BrowseLayout_Vertical_ThreeTextVariant_ver5.0'":
+            BorderColor: =RGBA(237, 237, 237, 1)
+            BorderThickness: =1
+            DelayItemLoading: =true
+            Height: =720
+            Items: |
+                =FirstN(
+                    SortByColumns(
+                        Filter(
+                            colProductionHistory,
+                            Line = drpLineSel.Selected.Value &&
+                            (cbInclWO.Value = false || DateValue(Date) > Today() - 7)
+                        ),
+                        "Date",
+                        "Descending"
+                    ),
+                    50
+                )
+            Layout: =Layout.Vertical
+            LoadingSpinner: =LoadingSpinner.Data
+            OnSelect: |-
+                =Patch(
+                    _productionRecord,
+                    {
+                        Date: DateValue(ThisItem.Date),
+                        Line: ThisItem.Line,
+                        Type: ThisItem.Type, 
+                        Customer: ThisItem.Customer, 
+                        ProjectName: ThisItem.ProjectName, 
+                        PO: ThisItem.PO, 
+                        ProductNo: ThisItem.ProductNo, 
+                        Spec: ThisItem.Spec,
+                        Remark: ThisItem.Remark, 
+                        Shift: ThisItem.Shift, 
+                        Process: ThisItem.Process, 
+                        pID: ThisItem.ID 
+                    }
+                );
+            TemplatePadding: =0
+            TemplateSize: =lbDate2.Height
+            Width: =1100
+            X: =contHeader3.X
+            Y: =217
+            ZIndex: =1
+
+            lbPO2 As label:
+                FontWeight: =If(ThisItem.IsSelected, FontWeight.Bold, FontWeight.Normal)
+                Height: |
+                    =lbDate2.Height
+                OnSelect: =Select(Parent)
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =galFontSize + 1
+                Text: =ThisItem.PO
+                Width: =lbPO3.Width
+                X: =lbType2.X + lbType3.Width
+                Y: =1
+                ZIndex: =1
+
+            lbProcess2 As label:
+                FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                Height: |
+                    =lbDate2.Height
+                Italic: =true
+                OnSelect: =Select(Parent)
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =galFontSize + 1
+                Text: =ThisItem.Process
+                Width: =lbProcess3.Width
+                X: =lbCustomer2.X + lbCustomer2.Width
+                Y: =1
+                ZIndex: =2
+
+            lbDate2 As label:
+                Align: =Align.Center
+                FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                Height: =50
+                OnSelect: =Select(Parent)
+                PaddingBottom: =0
+                PaddingLeft: =10
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =galFontSize + 1
+                Text: =DateValue(ThisItem.Date)
+                Width: =lbDate3.Width
+                ZIndex: =3
+
+            NextArrow4 As icon.ChevronRight:
+                AccessibleLabel: =Self.Tooltip
+                Color: =RGBA(166, 166, 166, 1)
+                Height: =50
+                Icon: =Icon.ChevronRight
+                OnSelect: =Select(Parent)
+                PaddingBottom: =16
+                PaddingLeft: =16
+                PaddingRight: =16
+                PaddingTop: =16
+                Tooltip: ="항목 세부 정보 보기"
+                Width: =50
+                X: =Parent.TemplateWidth - Self.Width - 12
+                Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+                ZIndex: =4
+
+            Separator4 As rectangle:
+                BorderColor: =RGBA(237, 237, 237, 1)
+                BorderStyle: =BorderStyle.Dashed
+                BorderThickness: =1
+                Height: =1
+                OnSelect: =Select(Parent)
+                Width: =Parent.TemplateWidth
+                Y: =Parent.TemplateHeight - Self.Height
+                ZIndex: =5
+
+            Rectangle4 As rectangle:
+                Height: =Parent.TemplateHeight - Separator4.Height
+                OnSelect: =Select(Parent)
+                Visible: =ThisItem.IsSelected
+                Width: =4
+                ZIndex: =6
+
+            lbType2 As label:
+                FontWeight: =If(ThisItem.IsSelected, FontWeight.Bold, FontWeight.Normal)
+                Height: |
+                    =lbDate2.Height
+                OnSelect: =Select(Parent)
+                PaddingLeft: =10
+                Size: =galFontSize + 1
+                Text: =ThisItem.Type
+                Width: =lbType3.Width
+                Wrap: =false
+                X: =lbDate2.X + lbDate2.Width
+                Y: =1
+                ZIndex: =7
+
+            lbQty2 As label:
+                Align: =Align.Center
+                FontWeight: =If(ThisItem.IsSelected, FontWeight.Bold, FontWeight.Normal)
+                Height: |
+                    =lbDate2.Height
+                OnSelect: =Select(Parent)
+                Size: =galFontSize + 1
+                Text: =ThisItem.ProdQty
+                Width: =88
+                X: =lbProcess2.X + lbProcess2.Width
+                Y: |
+                    =0
+                ZIndex: =8
+
+            lbProductNo2 As label:
+                FontWeight: =If(ThisItem.IsSelected, FontWeight.Bold, FontWeight.Normal)
+                Height: |
+                    =lbDate2.Height
+                Italic: =true
+                OnSelect: =Select(Parent)
+                Size: =galFontSize + 1
+                Text: =ThisItem.ProductNo
+                Width: =lbProductNo3.Width
+                Wrap: =false
+                X: |
+                    =lbPO2.X + lbPO2.Width
+                ZIndex: =9
+
+            lbCustomer2 As label:
+                FontWeight: =If(ThisItem.IsSelected, FontWeight.Bold, FontWeight.Normal)
+                Height: |
+                    =lbDate2.Height
+                Italic: =true
+                OnSelect: =Select(Parent)
+                Size: =galFontSize + 1
+                Text: =ThisItem.Customer
+                Width: =lbCustomer3.Width
+                Wrap: =false
+                X: =lbProductNo2.X + lbProductNo2.Width
+                ZIndex: =10
+
+        drpLineSel As dropdown:
+            BorderColor: =RGBA(237, 237, 237, 1)
+            BorderThickness: =1
+            ChevronBackground: =RGBA(128, 128, 128, 1)
+            Items: =["MD","SYS"]
+            Size: =galFontSize + 1
+            Width: =113
+            X: =165
+            Y: =119
+            ZIndex: =2
+
+        cbInclWO As checkbox:
+            BorderColor: =RGBA(237, 237, 237, 1)
+            CheckboxBorderColor: =RGBA(128, 128, 128, 1)
+            Default: =true
+            Height: =28
+            OnCheck: =
+            OnUncheck: =
+            Size: =galFontSize + 1
+            Text: ="일주일 데이터만 보기"
+            Width: =222
+            X: =906
+            Y: =131
+            ZIndex: =3
+
+        lbProdHistory As label:
+            AutoHeight: =true
+            FontWeight: =FontWeight.Semibold
+            Height: =51
+            Size: =galFontSize + 7
+            Text: ="Production History"
+            Width: =388
+            X: =28
+            Y: =28
+            ZIndex: =4
+
+        IconRefresh_prodhistory As icon.Sync:
+            Color: =RGBA(54, 176, 75, 1)
+            Height: =40
+            Icon: =Icon.Sync
+            OnSelect: |
+                =Clear(colProductionHistory);
+                
+                ClearCollect(colProductionHistory, LastN(_pdR_prod, 100));
+            Width: =40
+            X: =336
+            Y: =28
+            ZIndex: =5
+
+        lbRefresh As label:
+            Size: =galFontSize - 2
+            Text: ="데이터 새로고침"
+            X: =399
+            Y: =28
+            ZIndex: =6
+
+        lbLine2 As label:
+            Size: =galFontSize + 1
+            Text: ="■ 라인 선택"
+            Width: =153
+            X: =28
+            Y: =119
+            ZIndex: =8
+
+        contHeader3 As groupContainer.horizontalAutoLayoutContainer:
+            Fill: =RGBA(0, 121, 187, 1)
+            Height: =40
+            LayoutMode: =LayoutMode.Auto
+            Width: =1100
+            X: =28
+            Y: =177
+            ZIndex: =9
+
+            lbDate3 As label:
+                Align: =Align.Center
+                Color: =RGBA(255, 255, 255, 1)
+                Size: =galFontSize + 1
+                Text: ="날짜"
+                Width: =190
+                ZIndex: =1
+
+            lbType3 As label:
+                Align: =Align.Center
+                Color: =RGBA(255, 255, 255, 1)
+                Size: =galFontSize + 1
+                Text: ="Type"
+                ZIndex: =2
+
+            lbPO3 As label:
+                Align: =Align.Center
+                Color: =RGBA(255, 255, 255, 1)
+                Size: =galFontSize + 1
+                Text: ="P.O"
+                ZIndex: =3
+
+            lbProductNo3 As label:
+                Align: =Align.Center
+                Color: =RGBA(255, 255, 255, 1)
+                Size: =galFontSize + 1
+                Text: ="ProductNo"
+                Width: =160
+                ZIndex: =4
+
+            lbCustomer3 As label:
+                Align: =Align.Center
+                Color: =RGBA(255, 255, 255, 1)
+                Size: =galFontSize + 1
+                Text: ="Customer"
+                Width: =160
+                ZIndex: =5
+
+            lbProcess3 As label:
+                Align: =Align.Center
+                Color: =RGBA(255, 255, 255, 1)
+                Size: =galFontSize + 1
+                Text: ="Process"
+                Width: |
+                    =160
+                ZIndex: =6
+
+            lbQty3 As label:
+                Align: =Align.Center
+                Color: =RGBA(255, 255, 255, 1)
+                Size: =galFontSize + 1
+                Text: ="실적수량"
+                Width: =100
+                ZIndex: =7
+
+        iconExit_def As icon.Cancel:
+            Color: =RGBA(77, 77, 77, 1)
+            Height: =30
+            Icon: =Icon.CancelBadge
+            OnSelect: =Set(varWOvis, false)
+            Width: =30
+            X: =Parent.Width - Self.Width - 10
+            Y: =10
+            ZIndex: =10
+
+    btnGroup_def As group:
+        Height: =5
+        Width: =5
+        X: =60
+        Y: =60
+        ZIndex: =26
+
+        btnSearch As button:
+            BorderThickness: =1
+            Fill: =RGBA(0, 134, 208, 1)
+            OnSelect: =Set(varWOvis, !varWOvis)
+            PaddingLeft: =40
+            Size: =galFontSize
+            Text: ="이력 조회"
+            Width: =130
+            X: =220
+            Y: =95
+            ZIndex: =4
+
+        btnGrid As button:
+            BorderThickness: =1
+            Fill: =RGBA(0, 134, 208, 1)
+            OnSelect: =Set(varGridEditable, !varGridEditable)
+            PaddingLeft: =40
+            Size: =galFontSize
+            Text: |
+                =If ( varGridEditable, "View", "Grid")
+            Width: =130
+            X: =514
+            Y: =95
+            ZIndex: =5
+
+        iconGrid As icon.Waffle:
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =30
+            Icon: =Icon.Waffle
+            Width: =30
+            X: =528
+            Y: =100
+            ZIndex: =6
+
+        btnSave As button:
+            BorderThickness: =1
+            Fill: =RGBA(0, 134, 208, 1)
+            OnSelect: |
+                =IfError(
+                    Patch( 
+                        _productionRecord, 
+                        colTaskUpdates
+                    ),
+                    Notify("저장 중 오류가 발생했습니다.", NotificationType.Error),
+                    Notify("저장이 완료되었습니다.", NotificationType.Success)
+                )
+            PaddingLeft: =40
+            Size: =galFontSize
+            Text: ="저장"
+            Width: =130
+            X: =367
+            Y: =95
+            ZIndex: =7
+
+        saveIcon As icon.Save:
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =30
+            Icon: =Icon.Save
+            OnSelect: =
+            Width: =30
+            X: =377
+            Y: =101
+            ZIndex: =8
+
+        searchIcon As icon.Search:
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =30
+            Icon: =Icon.Search
+            Width: =30
+            X: =230
+            Y: =100
+            ZIndex: =9
+

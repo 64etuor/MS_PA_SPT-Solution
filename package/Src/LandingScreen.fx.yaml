@@ -1,0 +1,68 @@
+LandingScreen As screen:
+
+    sideNavigation_Ld As sideNavigation:
+        pbMiniDashScreen: =pbMiniDashScreen
+        prodDefScreen: =prodDefScreen
+        prodJobScreen: =prodJobScreen
+        prodPlanScreen: =prodPlanScreen
+        prodWorkOrderScreen: =prodWorkOrderScreen
+
+    Title_Ld As label:
+        AutoHeight: =true
+        FontWeight: =FontWeight.Bold
+        Size: =galFontSize + 7
+        Text: ="SPT Solution"
+        Width: =690
+        X: =200
+        Y: =15
+        ZIndex: =2
+
+    gifGreetingFox As image:
+        Height: =485
+        Image: =welcome
+        Width: =732
+        X: =1248
+        Y: =595
+        ZIndex: =3
+
+    Greeting_Ld As label:
+        AutoHeight: =true
+        Font: =Font.'Courier New'
+        Height: =396
+        Size: =40
+        Text: |-
+            =Mid("Welcome, " & User().FullName &
+            " 
+            Please Select a menu item.", 1, counter)
+        Width: =1147
+        X: =626
+        Y: =(Parent.Height - Self.Height) * 0.5
+        ZIndex: =4
+
+    timerGreeting_Ld As timer:
+        AutoPause: =false
+        AutoStart: =true
+        Duration: =100
+        OnTimerEnd: =Set(counter, If(counter > 65, 0, counter + 1))
+        Repeat: =true
+        Visible: =false
+        X: =1000
+        Y: =760
+        ZIndex: =5
+
+    gifLeftArrow As image:
+        Image: ='left-arrow'
+        X: =180
+        Y: =(Parent.Height - Self.Height) * 0.5
+        ZIndex: =6
+
+    Label1 As label:
+        Align: =Align.Center
+        FontWeight: =FontWeight.Semibold
+        Height: =68
+        Text: ="* Teams로 접속할 경우 새 탭에서 열거나, 웹으로 접근하는 것을 추천드립니다. (반응형 레이아웃이 모바일 기기, FHD Desktop 해상도에 최적화되어 있습니다.)"
+        Width: =1366
+        X: =397
+        Y: =15
+        ZIndex: =7
+

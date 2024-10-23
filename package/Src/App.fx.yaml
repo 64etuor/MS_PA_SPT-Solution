@@ -1,0 +1,124 @@
+App As appinfo:
+    BackEnabled: =true
+    OnStart: |-
+        =Concurrent(
+            
+            ClearCollect(
+                colTaskUpdates,
+                    ShowColumns(
+                    _productionRecord,
+                    ID,
+                    Date,
+                    Line,
+                    Type,
+                    Customer,
+                    ProjectName, 
+                    PO, 
+                    ProductNo, 
+                    Spec, 
+                    Remark, 
+                    Shift, 
+                    Process,
+                    PartNo,
+                    PartName,
+                    SN,
+                    Picture,
+                    Qty,
+                    Div1,
+                    Div2,
+                    ReworkTime,
+                    Worker, 
+                    ActionTaken
+                )
+            ),
+         
+            ClearCollect(
+                colProdUpdates,
+                ShowColumns( 
+                    _pdR_prod,                                        
+                    ID, 
+                    Date, 
+                    Line, 
+                    Type, 
+                    Customer, 
+                    ProjectName,
+                    PO, 
+                    ProductNo, 
+                    Spec, 
+                    POqty,
+                    Remark, 
+                    Shift, 
+                    Process, 
+                    ProdQty, 
+                    InputMH, 
+                    LostMH, 
+                    LostDiv,
+                    LostReason, 
+                    isAch
+                )       
+            ),
+        
+            ClearCollect(
+                colAttUpdates,
+                ShowColumns( 
+                    _pdR_att,                                        
+                    ID, 
+                    Date, 
+                    Line, 
+                    Direct, 
+                    Indirect, 
+                    'Supported(m)', 
+                    'OverTime(m)', 
+                    'Sup_System(m)', 
+                    'Sup_Cell(m)', 
+                    'Sup_QC(m)', 
+                    'Sup_RnD(m)', 
+                    Absent, 
+                    'Tardy(m)', 
+                    'LeaveEarly(m)', 
+                    'Rest(m)', 
+                    'Assembly(m)', 
+                    'Education(m)', 
+                    'Cleaning(m)', 
+                    'PlannedDowntime(m)', 
+                    OnSiteManagement, 
+                    'MaterialsHandling(m)', 
+                    Remark
+                )       
+            ),
+            ClearCollect(
+                colProcess,
+                ShowColumns(
+                    _db_processcode,
+                    Type, 
+                    Process, 
+                    AchProcess
+                )
+            ),
+        
+            ClearCollect(colworkOrder, LastN(_workOrder, 100));
+                           
+            
+            ClearCollect(colProductionHistory, LastN(_pdR_prod, 100)),
+                            
+               
+            // 전역 변수 설정
+            Set(galItemHeight, 120),
+            Set(galFontSize, 8),
+            Set(galProdHeight, 60)
+        );
+        Concurrent(
+            Clear(colTaskUpdates),
+            Clear(colProdUpdates), 
+            Clear(colAttUpdates)
+        )
+    StartScreen: =
+    Theme: =PowerAppsTheme
+
+    Host As hostControl.DefaultHostControlVariant:
+        OnCancel: =false
+        OnEdit: =false
+        OnNew: =false
+        OnSave: =false
+        OnView: =false
+

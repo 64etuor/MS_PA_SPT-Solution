@@ -1,0 +1,176 @@
+prodPlanScreen As screen:
+
+    Label3_2 As label:
+        AutoHeight: =true
+        FontWeight: =FontWeight.Bold
+        Size: =galFontSize + 7
+        Text: ="Plan"
+        Width: =698
+        X: =220
+        Y: =15
+        ZIndex: =2
+
+    sideNavigation_plan As sideNavigation:
+        pbMiniDashScreen: =pbMiniDashScreen
+        prodDefScreen: =prodDefScreen
+        prodJobScreen: =prodJobScreen
+        prodPlanScreen: =prodPlanScreen
+        prodWorkOrderScreen: =prodWorkOrderScreen
+        ZIndex: =5
+
+    DataTable2 As dataTable.datatable:
+        BorderStyle: =BorderStyle.Solid
+        DisplayMode: =DisplayMode.Edit
+        Fill: =RGBA(0, 0, 0, 0)
+        Height: =930
+        Items: =Sort(_pdR_plan, Date, "Descending")
+        Width: =1704
+        X: =228
+        Y: =86
+        ZIndex: =6
+
+        Line_열2 As dataTableColumn.textualColumn:
+            AutoWidth: =false
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="Line"
+            FieldName: ="Line"
+            FieldVariantName: ="textualColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =2
+            Text: =ThisItem.Line
+            Width: =75
+            X: =0
+            Y: =0
+            ZIndex: =2
+
+        Type_열2 As dataTableColumn.textualColumn:
+            AutoWidth: =false
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="Type"
+            FieldName: ="Type"
+            FieldVariantName: ="textualColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =3
+            Text: =ThisItem.Type
+            Width: =119
+            X: =0
+            Y: =0
+            ZIndex: =3
+
+        Customer_열2 As dataTableColumn.textualColumn:
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="Customer"
+            FieldName: ="Customer"
+            FieldVariantName: ="textualColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =4
+            Text: =ThisItem.Customer
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =4
+
+        ProjectName_열1 As dataTableColumn.textualColumn:
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="ProjectName"
+            FieldName: ="ProjectName"
+            FieldVariantName: ="textualColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =5
+            Text: =ThisItem.ProjectName
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =5
+
+        PO_열1 As dataTableColumn.textualColumn:
+            AutoWidth: =false
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="PO"
+            FieldName: ="PO"
+            FieldVariantName: ="textualColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =6
+            Text: =ThisItem.PO
+            Width: =128
+            X: =0
+            Y: =0
+            ZIndex: =6
+
+        ProductNo_열2 As dataTableColumn.textualColumn:
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="ProductNo"
+            FieldName: ="ProductNo"
+            FieldVariantName: ="textualColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =7
+            Text: =ThisItem.ProductNo
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =7
+
+        Description_열1 As dataTableColumn.textualColumn:
+            AutoWidth: =false
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="Description"
+            FieldName: ="Description"
+            FieldVariantName: ="textualColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =8
+            Text: =ThisItem.Description
+            Width: =271
+            X: =0
+            Y: =0
+            ZIndex: =8
+
+        Remark_열2 As dataTableColumn.textualColumn:
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="Remark"
+            FieldName: ="Remark"
+            FieldVariantName: ="textualColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =9
+            Text: =ThisItem.Remark
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =9
+
+        Date_열1 As dataTableColumn.textualColumn:
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="Date"
+            FieldName: ="Date"
+            FieldVariantName: ="textualColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =10
+            Text: =ThisItem.Date
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =10
+
+        PlanQty_열1 As dataTableColumn.numberColumn:
+            AutoWidth: =false
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="PlanQty"
+            FieldName: ="PlanQty"
+            FieldVariantName: ="numberColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =11
+            Text: =ThisItem.PlanQty
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =11
+

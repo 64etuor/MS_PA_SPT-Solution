@@ -1,0 +1,118 @@
+Screen1 As screen:
+
+    sideNavigation_pb_1 As sideNavigation:
+        pbMiniDashScreen: =pbMiniDashScreen
+        prodDefScreen: =prodDefScreen
+        prodJobScreen: =prodJobScreen
+        prodPlanScreen: =prodPlanScreen
+        prodWorkOrderScreen: =prodWorkOrderScreen
+
+    DataTable3 As dataTable.datatable:
+        BorderStyle: =BorderStyle.Solid
+        DisplayMode: =DisplayMode.Edit
+        Fill: =RGBA(0, 0, 0, 0)
+        Height: =899
+        Items: =_db_standardTime
+        Width: =1638
+        X: =252
+        Y: =124
+        ZIndex: =2
+
+        Line_열3 As dataTableColumn.textualColumn:
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="Line"
+            FieldName: ="field_0"
+            FieldVariantName: ="textualColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =1
+            Text: =ThisItem.Line
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =1
+
+        ProductNo_열3 As dataTableColumn.textualColumn:
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="ProductNo"
+            FieldName: ="field_1"
+            FieldVariantName: ="textualColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =2
+            Text: =ThisItem.ProductNo
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =2
+
+        Spec_열2 As dataTableColumn.textualColumn:
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="Spec"
+            FieldName: ="field_2"
+            FieldVariantName: ="textualColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =3
+            Text: =ThisItem.Spec
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =3
+
+        Description_열2 As dataTableColumn.textualColumn:
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="Description"
+            FieldName: ="field_3"
+            FieldVariantName: ="textualColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =4
+            Text: =ThisItem.Description
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =4
+
+        StandardTime_열1 As dataTableColumn.numberColumn:
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="StandardTime"
+            FieldName: ="field_4"
+            FieldVariantName: ="numberColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =5
+            Text: =ThisItem.StandardTime
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =5
+
+        StartDate_열1 As dataTableColumn.textualColumn:
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="StartDate"
+            FieldName: ="field_5"
+            FieldVariantName: ="textualColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =6
+            Text: =ThisItem.StartDate
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =6
+
+        EndDate_열1 As dataTableColumn.textualColumn:
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="EndDate"
+            FieldName: ="field_6"
+            FieldVariantName: ="textualColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =7
+            Text: =ThisItem.EndDate
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =7
+
