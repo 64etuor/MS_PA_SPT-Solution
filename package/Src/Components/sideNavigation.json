@@ -945,7 +945,7 @@
                   },
                   {
                     "Category": "Design",
-                    "InvariantScript": "0\r\n\r\n",
+                    "InvariantScript": "0\n\n",
                     "Property": "X",
                     "RuleProviderType": "User"
                   },
@@ -999,7 +999,7 @@
                   },
                   {
                     "Category": "Design",
-                    "InvariantScript": "11\r\n",
+                    "InvariantScript": "11\n",
                     "Property": "Size",
                     "RuleProviderType": "User"
                   },
@@ -1398,7 +1398,7 @@
                   },
                   {
                     "Category": "Design",
-                    "InvariantScript": "If(\r\n    sideNavigation.ActiveScreen.Name = \"pbMiniDashScreen\", \r\n    RGBA(219, 219, 219, 0.8),\r\n    RGBA(0, 0, 0, 0)\r\n    )",
+                    "InvariantScript": "If(\n    sideNavigation.ActiveScreen.Name = \"pbMiniDashScreen\", \n    RGBA(219, 219, 219, 0.8),\n    RGBA(0, 0, 0, 0)\n    )",
                     "Property": "Fill",
                     "RuleProviderType": "User"
                   },
@@ -1446,7 +1446,7 @@
                   },
                   {
                     "Category": "Design",
-                    "InvariantScript": "0\r\n\r\n",
+                    "InvariantScript": "0\n\n",
                     "Property": "X",
                     "RuleProviderType": "User"
                   },
@@ -1861,7 +1861,7 @@
                   },
                   {
                     "Category": "Design",
-                    "InvariantScript": "0\r\n\r\n",
+                    "InvariantScript": "0\n\n",
                     "Property": "X",
                     "RuleProviderType": "User"
                   },
@@ -1915,7 +1915,7 @@
                   },
                   {
                     "Category": "Design",
-                    "InvariantScript": "11\r\n",
+                    "InvariantScript": "11\n",
                     "Property": "Size",
                     "RuleProviderType": "User"
                   },
@@ -2314,7 +2314,7 @@
                   },
                   {
                     "Category": "Design",
-                    "InvariantScript": "If(\r\n    sideNavigation.ActiveScreen.Name = \"prodJobScreen\", \r\n    RGBA(219, 219, 219, 0.8),\r\n    RGBA(0, 0, 0, 0)\r\n    )",
+                    "InvariantScript": "If(\n    sideNavigation.ActiveScreen.Name = \"prodJobScreen\", \n    RGBA(219, 219, 219, 0.8),\n    RGBA(0, 0, 0, 0)\n    )",
                     "Property": "Fill",
                     "RuleProviderType": "User"
                   },
@@ -2362,7 +2362,7 @@
                   },
                   {
                     "Category": "Design",
-                    "InvariantScript": "0\r\n\r\n",
+                    "InvariantScript": "0\n\n",
                     "Property": "X",
                     "RuleProviderType": "User"
                   },
@@ -2821,7 +2821,7 @@
                   },
                   {
                     "Category": "Design",
-                    "InvariantScript": "If(\r\n    sideNavigation.ActiveScreen.Name = \"prodDefScreen\", \r\n    RGBA(219, 219, 219, 0.8),\r\n    RGBA(0, 0, 0, 0)\r\n    )",
+                    "InvariantScript": "If(\n    sideNavigation.ActiveScreen.Name = \"prodDefScreen\", \n    RGBA(219, 219, 219, 0.8),\n    RGBA(0, 0, 0, 0)\n    )",
                     "Property": "Fill",
                     "RuleProviderType": "User"
                   },
@@ -2869,7 +2869,7 @@
                   },
                   {
                     "Category": "Design",
-                    "InvariantScript": "0\r\n\r\n",
+                    "InvariantScript": "0\n\n",
                     "Property": "X",
                     "RuleProviderType": "User"
                   },
@@ -3376,7 +3376,7 @@
                   },
                   {
                     "Category": "Design",
-                    "InvariantScript": "0\r\n\r\n",
+                    "InvariantScript": "0\n\n",
                     "Property": "X",
                     "RuleProviderType": "User"
                   },
@@ -3883,7 +3883,7 @@
                   },
                   {
                     "Category": "Design",
-                    "InvariantScript": "0\r\n\r\n",
+                    "InvariantScript": "0\n\n",
                     "Property": "X",
                     "RuleProviderType": "User"
                   },
@@ -4382,7 +4382,7 @@
                   },
                   {
                     "Category": "Design",
-                    "InvariantScript": "0\r\n\r\n",
+                    "InvariantScript": "0\n\n",
                     "Property": "X",
                     "RuleProviderType": "User"
                   },
@@ -4875,7 +4875,7 @@
                   },
                   {
                     "Category": "Design",
-                    "InvariantScript": "0\r\n\r\n",
+                    "InvariantScript": "0\n\n",
                     "Property": "X",
                     "RuleProviderType": "User"
                   },
@@ -5277,7 +5277,7 @@
                   },
                   {
                     "Category": "Design",
-                    "InvariantScript": "0\r\n\r\n",
+                    "InvariantScript": "0\n\n",
                     "Property": "X",
                     "RuleProviderType": "User"
                   },
@@ -5331,7 +5331,7 @@
                   },
                   {
                     "Category": "Design",
-                    "InvariantScript": "11\r\n",
+                    "InvariantScript": "11\n",
                     "Property": "Size",
                     "RuleProviderType": "User"
                   },
@@ -5770,7 +5770,7 @@
                   },
                   {
                     "Category": "Design",
-                    "InvariantScript": "0\r\n\r\n",
+                    "InvariantScript": "0\n\n",
                     "Property": "X",
                     "RuleProviderType": "User"
                   },
@@ -6263,7 +6263,7 @@
                   },
                   {
                     "Category": "Design",
-                    "InvariantScript": "0\r\n\r\n",
+                    "InvariantScript": "0\n\n",
                     "Property": "X",
                     "RuleProviderType": "User"
                   },
@@ -6665,7 +6665,7 @@
                   },
                   {
                     "Category": "Design",
-                    "InvariantScript": "0\r\n\r\n",
+                    "InvariantScript": "0\n\n",
                     "Property": "X",
                     "RuleProviderType": "User"
                   },
@@ -6719,7 +6719,7 @@
                   },
                   {
                     "Category": "Design",
-                    "InvariantScript": "11\r\n",
+                    "InvariantScript": "11\n",
                     "Property": "Size",
                     "RuleProviderType": "User"
                   },
@@ -7158,7 +7158,7 @@
                   },
                   {
                     "Category": "Design",
-                    "InvariantScript": "0\r\n\r\n",
+                    "InvariantScript": "0\n\n",
                     "Property": "X",
                     "RuleProviderType": "User"
                   },
@@ -7651,7 +7651,7 @@
                   },
                   {
                     "Category": "Design",
-                    "InvariantScript": "0\r\n\r\n",
+                    "InvariantScript": "0\n\n",
                     "Property": "X",
                     "RuleProviderType": "User"
                   },
@@ -9290,7 +9290,7 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "0\r\n",
+            "InvariantScript": "0\n",
             "Property": "Y",
             "RuleProviderType": "User"
           },
@@ -9442,7 +9442,7 @@
       "prodWorkOrderScreen",
       "prodPlanScreen"
     ],
-    "LastModifiedTimestamp": "638652482943555161",
+    "LastModifiedTimestamp": "638652672899856151",
     "Name": "sideNavigation",
     "Rules": [
       {
@@ -9592,7 +9592,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638652482943555161",
+  "LastModifiedTimestamp": "638652672899856151",
   "Name": "94cc6ea9c3494c5d8a6a25904739c267",
   "OverridableProperties": {},
   "Version": "1.0"

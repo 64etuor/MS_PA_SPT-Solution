@@ -60,6 +60,7 @@ LandingScreen As screen:
         Align: =Align.Center
         FontWeight: =FontWeight.Semibold
         Height: =68
+        Size: =10
         Text: ="* Teams로 접속할 경우 새 탭에서 열거나, 웹으로 접근하는 것을 추천드립니다. (반응형 레이아웃이 모바일 기기, FHD Desktop 해상도에 최적화되어 있습니다.)"
         Width: =1366
         X: =397
