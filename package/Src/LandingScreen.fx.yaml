@@ -56,7 +56,7 @@ LandingScreen As screen:
         Y: =(Parent.Height - Self.Height) * 0.5
         ZIndex: =6
 
-    Label1 As label:
+    lb_caution As label:
         Align: =Align.Center
         FontWeight: =FontWeight.Semibold
         Height: =68

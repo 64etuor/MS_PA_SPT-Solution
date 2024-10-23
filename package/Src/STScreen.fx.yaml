@@ -1,4 +1,4 @@
-Screen1 As screen:
+STScreen As screen:
 
     sideNavigation_pb_1 As sideNavigation:
         pbMiniDashScreen: =pbMiniDashScreen
