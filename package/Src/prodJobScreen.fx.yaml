@@ -4731,16 +4731,22 @@ prodJobScreen As screen:
         btnSave_prod As button:
             Fill: =RGBA(0, 134, 208, 1)
             OnSelect: |
-                =If(Value(lbLeftMH.Text) <> 0, 
+                =If(
+                    Value(lbLeftMH.Text) <> 0, 
                     Notify("잔여공수가 0이 아닙니다"), 
                 
-                    IfError(
-                        Patch( 
-                            _pdR_prod, 
-                            colProdUpdates
-                        ),
-                        Notify("저장 중 오류가 발생했습니다.", NotificationType.Error),
-                        Notify("저장이 완료되었습니다.", NotificationType.Success)
+                    // Patch 결과를 변수에 저장
+                    With(
+                        {
+                            result: Patch(_pdR_prod, colProdUpdates)
+                        },
+                        
+                        // Patch 결과 확인
+                        If(
+                            IsBlank(result),
+                            Notify("저장이 완료되었습니다.", NotificationType.Success),
+                            Notify("저장 중 오류가 발생했습니다.", NotificationType.Error)
+                        )
                     )
                 )
             PaddingLeft: =40

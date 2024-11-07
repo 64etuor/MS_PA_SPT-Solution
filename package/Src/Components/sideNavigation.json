@@ -9442,7 +9442,7 @@
       "prodWorkOrderScreen",
       "prodPlanScreen"
     ],
-    "LastModifiedTimestamp": "638652672899856151",
+    "LastModifiedTimestamp": "638665536258686829",
     "Name": "sideNavigation",
     "Rules": [
       {
@@ -9592,7 +9592,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638652672899856151",
+  "LastModifiedTimestamp": "638665536258686829",
   "Name": "94cc6ea9c3494c5d8a6a25904739c267",
   "OverridableProperties": {},
   "Version": "1.0"
