@@ -4735,18 +4735,11 @@ prodJobScreen As screen:
                     Value(lbLeftMH.Text) <> 0, 
                     Notify("잔여공수가 0이 아닙니다"), 
                 
-                    // Patch 수행
-                    With(
-                        {
-                            result: Patch(_pdR_prod, colProdUpdates)
-                        },
-                        
-                        // Patch 성공 여부 확인
-                        If(
-                            IsEmpty(Errors(_pdR_prod, result)),
-                            Notify("저장이 완료되었습니다.", NotificationType.Success),
-                            Notify("저장 중 오류가 발생했습니다.", NotificationType.Error)
-                        )
+                    // Patch 실행 및 오류 확인
+                    IfError(
+                        Patch(_pdR_prod, colProdUpdates),
+                        Notify("저장 중 오류가 발생했습니다.", NotificationType.Error),
+                        Notify("저장이 완료되었습니다.", NotificationType.Success)
                     )
                 )
             PaddingLeft: =40
