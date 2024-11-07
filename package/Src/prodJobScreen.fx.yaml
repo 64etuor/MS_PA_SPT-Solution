@@ -4741,7 +4741,8 @@ prodJobScreen As screen:
                     // Patch 오류 확인
                     If(
                         IsEmpty(Errors(_pdR_prod)),
-                        Notify("저장이 완료되었습니다.", NotificationType.Success),
+                        Notify("저장이 완료되었습니다.", NotificationType.Success);
+                        Clear(colProdUpdates),
                         Notify("저장 중 오류가 발생했습니다.", NotificationType.Error)
                     )
                 )
